@@ -1,26 +1,335 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --background: #0c0c14;
+  --background-darker: #070710;
+  --background-lighter: #1a1a28;
+  --foreground: #ffffff;
+  --primary: #9d4eff;
+  --primary-light: #b47aff;
+  --primary-dark: #7e3bd0;
+  --secondary: #f3f3f3;
+  --accent: #d0a1ff;
+  --gold: #d4af37;
+  --gold-light: #f0d78a;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  letter-spacing: 0.025em;
+  line-height: 1.7;
+}
+
+/* Couture Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 0.875rem 2rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(157, 78, 255, 0.5);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-light);
+  border: 1px solid var(--primary-light);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 0.875rem 2rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(157, 78, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(157, 78, 255, 0.2);
+}
+
+/* Couture Card Styles */
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 2rem;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(157, 78, 255, 0.2);
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.product-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.product-card:hover::after {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 15px rgba(157, 78, 255, 0.3);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-card img {
+  transition: all 0.7s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+.product-card .product-info {
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(12, 12, 20, 0.95), rgba(12, 12, 20, 0.7), transparent);
+}
+
+/* Couture Section Styles */
+.section-heading {
+  color: var(--foreground);
+  position: relative;
+  display: inline-block;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-heading.centered {
+  text-align: center;
+}
+
+.section-heading.centered::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Luxury Category Card */
+.category-card {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  aspect-ratio: 1/1.2;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.category-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  z-index: 3;
+  transition: all 0.5s ease;
+}
+
+.category-card:hover::after {
+  border-color: var(--gold);
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 7, 16, 0.9), rgba(7, 7, 16, 0.5), transparent);
+  z-index: 1;
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.7s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.1);
+}
+
+.category-card .category-name {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-dark) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-text {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Container with max width */
+.container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Divider */
+.elegant-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 3rem 0;
+  opacity: 0.5;
+}
+
+/* Couture Image Frame */
+.couture-frame {
+  position: relative;
+  padding: 1px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.couture-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, var(--gold), transparent);
+  z-index: 1;
+}
+
+.couture-frame img,
+.couture-frame > div {
+  position: relative;
+  z-index: 2;
+  border-radius: 0.4rem;
+}
+
+/* Luxury Quote */
+.luxury-quote {
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+  position: relative;
+  padding: 2rem 3rem;
+}
+
+.luxury-quote::before,
+.luxury-quote::after {
+  content: '"';
+  font-family: serif;
+  font-size: 4rem;
+  color: var(--gold);
+  opacity: 0.5;
+  position: absolute;
+}
+
+.luxury-quote::before {
+  top: 0;
+  left: 0;
+}
+
+.luxury-quote::after {
+  bottom: -1.5rem;
+  right: 0;
 }

@@ -3,16 +3,16 @@ import Image from "next/image";
 
 export default function Fourth() {
   return (
-    <section className="py-24 bg-[#050508]">
+    <section className="py-24 bg-[#ffffff]">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="md:w-1/2 order-2 md:order-1">
             <div className="couture-frame">
-              <div className="w-full aspect-[4/5] flex items-center justify-center relative overflow-hidden bg-[#0c0c14]">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#9d4eff]/10 to-transparent opacity-30"></div>
+              <div className="w-full aspect-[4/5] flex items-center justify-center relative overflow-hidden bg-[#f5f5f5]">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#e8a87c]/10 to-transparent opacity-30"></div>
                 <div className="relative z-10 flex flex-col items-center">
                   <span className="luxury-quote text-4xl font-light mb-4">"</span>
-                  <p className="text-center text-gray-300 font-light tracking-wider px-8 italic">
+                  <p className="text-center text-gray-600 font-light tracking-wider px-8 italic">
                     La excelencia no es un acto, sino un hábito en todo lo que hacemos
                   </p>
                   <span className="luxury-quote text-4xl font-light mt-4 rotate-180">"</span>
@@ -28,16 +28,16 @@ export default function Fourth() {
             </div>
           </div>
           <div className="md:w-1/2 order-1 md:order-2">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#d4af37]/70 mb-4 block">Nuestra Filosofía</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">Nuestra Filosofía</span>
             <h2 className="section-heading text-3xl mb-8">Sobre Nosotros</h2>
-            <p className="text-gray-300 mb-6 font-light leading-relaxed">
+            <p className="text-gray-600 mb-6 font-light leading-relaxed">
               Somos una firma exclusiva especializada en tecnología de ultrasonido de alta precisión, dedicada a proporcionar soluciones innovadoras y sofisticadas para el sector médico e industrial más exigente.
             </p>
             <p className="text-gray-300 mb-10 font-light leading-relaxed">
               Con una trayectoria de excelencia, nuestro selecto equipo de expertos está comprometido con ofrecer un servicio impecable y personalizado que supera las expectativas de nuestra distinguida clientela.
             </p>
             <div className="flex items-center">
-              <div className="w-12 h-px bg-[#d4af37]/30 mr-6"></div>
+              <div className="w-12 h-px bg-[#e8a87c]/40 mr-6"></div>
               <Link href="/nosotros" className="btn-secondary">
                 Descubrir Nuestra Historia
               </Link>

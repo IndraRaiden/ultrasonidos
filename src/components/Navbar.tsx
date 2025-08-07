@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,21 +33,21 @@ const Navbar = () => {
           
           <div className="hidden md:flex items-center">
             <div className="flex space-x-1 mr-8">
-              <Link href="/" className="px-4 py-2 text-gray-600 hover:text-[#3a3a3a] uppercase tracking-widest text-xs font-light transition-colors duration-500 relative group">
+              <Link href="/" className={`px-4 py-2 ${pathname === '/' ? 'text-[#3a3a3a]' : 'text-gray-600'} hover:text-[#3a3a3a] uppercase tracking-widest text-xs font-light transition-colors duration-500 relative group`}>
                 Home
-                <span className="absolute bottom-0 left-1/2 w-0 h-px bg-[#e8a87c] group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300"></span>
+                <span className={`absolute bottom-0 left-1/2 ${pathname === '/' ? 'w-1/2 left-1/4' : 'w-0'} h-px bg-[#e8a87c] group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300`}></span>
               </Link>
-              <Link href="/services" className="px-4 py-2 text-gray-300 hover:text-white uppercase tracking-widest text-xs font-light transition-colors duration-500 relative group">
+              <Link href="/services" className={`px-4 py-2 ${pathname === '/services' ? 'text-[#3a3a3a]' : 'text-gray-600'} hover:text-[#3a3a3a] uppercase tracking-widest text-xs font-light transition-colors duration-500 relative group`}>
                 Services
-                <span className="absolute bottom-0 left-1/2 w-0 h-px bg-[#e8a87c] group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300"></span>
+                <span className={`absolute bottom-0 left-1/2 ${pathname === '/services' ? 'w-1/2 left-1/4' : 'w-0'} h-px bg-[#e8a87c] group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300`}></span>
               </Link>
-              <Link href="/about" className="px-4 py-2 text-gray-300 hover:text-white uppercase tracking-widest text-xs font-light transition-colors duration-500 relative group">
+              <Link href="/about" className={`px-4 py-2 ${pathname === '/about' ? 'text-[#3a3a3a]' : 'text-gray-600'} hover:text-[#3a3a3a] uppercase tracking-widest text-xs font-light transition-colors duration-500 relative group`}>
                 About Us
-                <span className="absolute bottom-0 left-1/2 w-0 h-px bg-[#e8a87c] group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300"></span>
+                <span className={`absolute bottom-0 left-1/2 ${pathname === '/about' ? 'w-1/2 left-1/4' : 'w-0'} h-px bg-[#e8a87c] group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300`}></span>
               </Link>
-              <Link href="/contact" className="px-4 py-2 text-gray-300 hover:text-white uppercase tracking-widest text-xs font-light transition-colors duration-500 relative group">
+              <Link href="/contact" className={`px-4 py-2 ${pathname === '/contact' ? 'text-[#3a3a3a]' : 'text-gray-600'} hover:text-[#3a3a3a] uppercase tracking-widest text-xs font-light transition-colors duration-500 relative group`}>
                 Contact
-                <span className="absolute bottom-0 left-1/2 w-0 h-px bg-[#e8a87c] group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300"></span>
+                <span className={`absolute bottom-0 left-1/2 ${pathname === '/contact' ? 'w-1/2 left-1/4' : 'w-0'} h-px bg-[#e8a87c] group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300`}></span>
               </Link>
             </div>
             <button className="btn-primary border border-[#e8a87c]/40 bg-transparent hover:bg-[#e8a87c]/10 text-[#c78550] hover:text-[#3a3a3a] group relative overflow-hidden">
@@ -79,16 +81,16 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-[#ffffff]/95 backdrop-blur-xl border-b border-[#e8a87c]/20">
           <div className="container-custom py-6 space-y-4">
-            <Link href="/" className="block px-4 py-3 text-[#3a3a3a] font-light uppercase tracking-widest text-xs border-l border-[#e8a87c]/40">
+            <Link href="/" className={`block px-4 py-3 ${pathname === '/' ? 'text-[#3a3a3a] border-[#e8a87c]/40' : 'text-gray-500 hover:text-[#3a3a3a] border-transparent hover:border-[#e8a87c]/40'} font-light uppercase tracking-widest text-xs border-l transition-colors duration-300`}>
               Home
             </Link>
-            <Link href="/services" className="block px-4 py-3 text-gray-500 hover:text-[#3a3a3a] font-light uppercase tracking-widest text-xs border-l border-transparent hover:border-[#e8a87c]/40 transition-colors duration-300">
+            <Link href="/services" className={`block px-4 py-3 ${pathname === '/services' ? 'text-[#3a3a3a] border-[#e8a87c]/40' : 'text-gray-500 hover:text-[#3a3a3a] border-transparent hover:border-[#e8a87c]/40'} font-light uppercase tracking-widest text-xs border-l transition-colors duration-300`}>
               Services
             </Link>
-            <Link href="/about" className="block px-4 py-3 text-gray-300 hover:text-white font-light uppercase tracking-widest text-xs border-l border-transparent hover:border-[#d4af37]/30 transition-colors duration-300">
+            <Link href="/about" className={`block px-4 py-3 ${pathname === '/about' ? 'text-[#3a3a3a] border-[#e8a87c]/40' : 'text-gray-500 hover:text-[#3a3a3a] border-transparent hover:border-[#e8a87c]/40'} font-light uppercase tracking-widest text-xs border-l transition-colors duration-300`}>
               About Us
             </Link>
-            <Link href="/contact" className="block px-4 py-3 text-gray-300 hover:text-white font-light uppercase tracking-widest text-xs border-l border-transparent hover:border-[#d4af37]/30 transition-colors duration-300">
+            <Link href="/contact" className={`block px-4 py-3 ${pathname === '/contact' ? 'text-[#3a3a3a] border-[#e8a87c]/40' : 'text-gray-500 hover:text-[#3a3a3a] border-transparent hover:border-[#e8a87c]/40'} font-light uppercase tracking-widest text-xs border-l transition-colors duration-300`}>
               Contact
             </Link>
             <div className="pt-6 border-t border-[#e8a87c]/20">

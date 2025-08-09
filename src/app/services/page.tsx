@@ -1,11 +1,11 @@
-import Navbar from "../../components/Navbar";
+// Navbar is now in the layout file
 import Footer from "../../components/Footer";
 import Link from "next/link";
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen flex flex-col pt-24">
-      <Navbar />
+    <div className="min-h-screen flex flex-col">
+      {/* Navbar is now in the layout file */}
       
       {/* Hero Section */}
       <section className="py-16 bg-[#fafafa]">

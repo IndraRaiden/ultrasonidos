@@ -1,14 +1,39 @@
+'use client';
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Third() {
+  const [currentLanguage, setCurrentLanguage] = useState('en');
+
+  useEffect(() => {
+    // Initial check for language
+    const handleLanguageChange = (event: CustomEvent) => {
+      setCurrentLanguage(event.detail.language);
+    };
+
+    // Add event listener for language changes
+    document.addEventListener('languageChange', handleLanguageChange as EventListener);
+
+    // Clean up event listener
+    return () => {
+      document.removeEventListener('languageChange', handleLanguageChange as EventListener);
+    };
+  }, []);
   return (
     <section className="py-24 bg-[#fafafa]">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">Servicios Exclusivos</span>
-          <h2 className="section-heading centered text-3xl">Nuestros Servicios</h2>
+          <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">
+            {currentLanguage === 'en' ? 'Exclusive Services' : 'Servicios Exclusivos'}
+          </span>
+          <h2 className="section-heading centered text-3xl">
+            {currentLanguage === 'en' ? 'Our Services' : 'Nuestros Servicios'}
+          </h2>
           <p className="text-gray-600 mt-8 max-w-2xl mx-auto font-light leading-relaxed">
-            Ofrecemos una colección exclusiva de servicios de ultrasonido diseñados con la más alta precisión y sofisticación.
+            {currentLanguage === 'en' 
+              ? 'We offer an exclusive collection of ultrasound services designed with the highest precision and sophistication.'
+              : 'Ofrecemos una colección exclusiva de servicios de ultrasonido diseñados con la más alta precisión y sofisticación.'}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -25,12 +50,16 @@ export default function Third() {
               </div>
             </div>
             <div className="product-info">
-              <h3 className="text-lg font-light tracking-wider mb-3 text-[#3a3a3a] group-hover:text-[#c78550] transition-colors duration-300">Diagnóstico por Ultrasonido</h3>
+              <h3 className="text-lg font-light tracking-wider mb-3 text-[#3a3a3a] group-hover:text-[#c78550] transition-colors duration-300">
+                {currentLanguage === 'en' ? 'Ultrasound Diagnostics' : 'Diagnóstico por Ultrasonido'}
+              </h3>
               <p className="text-gray-600 mb-6 text-sm font-light">
-                Servicios de diagnóstico precisos utilizando tecnología de ultrasonido de última generación con atención personalizada.
+                {currentLanguage === 'en' 
+                  ? 'Precise diagnostic services using state-of-the-art ultrasound technology with personalized attention.'
+                  : 'Servicios de diagnóstico precisos utilizando tecnología de ultrasonido de última generación con atención personalizada.'}
               </p>
-              <Link href="/servicios/diagnostico" className="btn-link">
-                <span className="text-xs uppercase tracking-widest">Descubrir</span>
+              <Link href="/services/diagnostics" className="btn-link">
+                <span className="text-xs uppercase tracking-widest">{currentLanguage === 'en' ? 'Discover' : 'Descubrir'}</span>
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
@@ -51,12 +80,16 @@ export default function Third() {
               </div>
             </div>
             <div className="product-info">
-              <h3 className="text-lg font-light tracking-wider mb-3 text-[#3a3a3a] group-hover:text-[#c78550] transition-colors duration-300">Consultoría Industrial</h3>
+              <h3 className="text-lg font-light tracking-wider mb-3 text-[#3a3a3a] group-hover:text-[#c78550] transition-colors duration-300">
+                {currentLanguage === 'en' ? 'Industrial Consulting' : 'Consultoría Industrial'}
+              </h3>
               <p className="text-gray-600 mb-6 text-sm font-light">
-                Asesoramiento exclusivo para implementar soluciones de ultrasonido avanzadas en procesos industriales de alta exigencia.
+                {currentLanguage === 'en' 
+                  ? 'Exclusive consulting to implement advanced ultrasound solutions in high-demand industrial processes.'
+                  : 'Asesoramiento exclusivo para implementar soluciones de ultrasonido avanzadas en procesos industriales de alta exigencia.'}
               </p>
-              <Link href="/servicios/consultoria" className="btn-link">
-                <span className="text-xs uppercase tracking-widest">Descubrir</span>
+              <Link href="/services/consulting" className="btn-link">
+                <span className="text-xs uppercase tracking-widest">{currentLanguage === 'en' ? 'Discover' : 'Descubrir'}</span>
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
@@ -77,12 +110,16 @@ export default function Third() {
               </div>
             </div>
             <div className="product-info">
-              <h3 className="text-lg font-light tracking-wider mb-3 text-[#3a3a3a] group-hover:text-[#c78550] transition-colors duration-300">Mantenimiento Premium</h3>
+              <h3 className="text-lg font-light tracking-wider mb-3 text-[#3a3a3a] group-hover:text-[#c78550] transition-colors duration-300">
+                {currentLanguage === 'en' ? 'Premium Maintenance' : 'Mantenimiento Premium'}
+              </h3>
               <p className="text-gray-600 mb-6 text-sm font-light">
-                Servicio técnico especializado con atención personalizada para mantener su equipo de ultrasonido en condiciones óptimas.
+                {currentLanguage === 'en' 
+                  ? 'Specialized technical service with personalized attention to keep your ultrasound equipment in optimal condition.'
+                  : 'Servicio técnico especializado con atención personalizada para mantener su equipo de ultrasonido en condiciones óptimas.'}
               </p>
-              <Link href="/servicios/mantenimiento" className="btn-link">
-                <span className="text-xs uppercase tracking-widest">Descubrir</span>
+              <Link href="/services/maintenance" className="btn-link">
+                <span className="text-xs uppercase tracking-widest">{currentLanguage === 'en' ? 'Discover' : 'Descubrir'}</span>
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>

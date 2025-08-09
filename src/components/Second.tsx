@@ -1,24 +1,50 @@
+'use client';
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useLanguage } from "./Navbar";
 
 export default function Second() {
+  const [currentLanguage, setCurrentLanguage] = useState('en');
+
+  useEffect(() => {
+    // Initial check for language
+    const handleLanguageChange = (event: CustomEvent) => {
+      setCurrentLanguage(event.detail.language);
+    };
+
+    // Add event listener for language changes
+    document.addEventListener('languageChange', handleLanguageChange as EventListener);
+
+    // Clean up event listener
+    return () => {
+      document.removeEventListener('languageChange', handleLanguageChange as EventListener);
+    };
+  }, []);
   return (
     <section className="bg-gradient-to-br from-[#f5f5f5] via-[#ffffff] to-[#f5f5f5] text-[#3a3a3a] py-24">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-12 md:mb-0 md:pr-12">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">Experiencia Exclusiva</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">
+              {currentLanguage === 'en' ? 'Exclusive Experience' : 'Experiencia Exclusiva'}
+            </span>
             <h1 className="text-4xl md:text-5xl font-light mb-8 tracking-wide leading-tight">
-              Tecnología de <span className="gold-text font-normal">ultrasonido</span> de alta <span className="gold-text font-normal">precisión</span>
+              {currentLanguage === 'en' 
+                ? <>High <span className="gold-text font-normal">precision</span> <span className="gold-text font-normal">ultrasound</span> technology</>
+                : <>Tecnología de <span className="gold-text font-normal">ultrasonido</span> de alta <span className="gold-text font-normal">precisión</span></>}
             </h1>
             <p className="text-gray-600 mb-10 font-light leading-relaxed">
-              Soluciones innovadoras y exclusivas para el sector médico e industrial, con la más alta calidad y sofisticación.
+              {currentLanguage === 'en' 
+                ? 'Innovative and exclusive solutions for the medical and industrial sectors, with the highest quality and sophistication.'
+                : 'Soluciones innovadoras y exclusivas para el sector médico e industrial, con la más alta calidad y sofisticación.'}
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link href="/servicios" className="btn-primary">
-                Descubrir Servicios
+              <Link href="/services" className="btn-primary">
+                {currentLanguage === 'en' ? 'Discover Services' : 'Descubrir Servicios'}
               </Link>
-              <Link href="/contacto" className="btn-secondary">
-                Consulta Privada
+              <Link href="/contact" className="btn-secondary">
+                {currentLanguage === 'en' ? 'Private Consultation' : 'Consulta Privada'}
               </Link>
             </div>
           </div>
@@ -29,7 +55,9 @@ export default function Second() {
                 <div className="relative z-10 flex flex-col items-center">
                   <span className="gold-text text-4xl font-light tracking-widest mb-4">ULTRA</span>
                   <div className="w-16 h-px bg-[#e8a87c]/50 mb-4"></div>
-                  <p className="text-center text-gray-600 font-light tracking-wider">TECNOLOGÍA EXCLUSIVA</p>
+                  <p className="text-center text-gray-600 font-light tracking-wider">
+                    {currentLanguage === 'en' ? 'EXCLUSIVE TECHNOLOGY' : 'TECNOLOGÍA EXCLUSIVA'}
+                  </p>
                 </div>
                 {/* Replace with actual image when available */}
                 {/* <Image 

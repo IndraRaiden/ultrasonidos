@@ -1,9 +1,28 @@
+'use client';
+
 // Navbar is now in the layout file
 import Footer from "../../components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function ContactPage() {
+  const [language, setLanguage] = useState('en');
+
+  useEffect(() => {
+    // Listen for language change events from the Navbar
+    const handleLanguageChange = (event: CustomEvent) => {
+      setLanguage(event.detail.language);
+    };
+
+    // Add event listener
+    document.addEventListener('languageChange', handleLanguageChange as EventListener);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener('languageChange', handleLanguageChange as EventListener);
+    };
+  }, []);
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navbar is now in the layout file */}
@@ -12,10 +31,16 @@ export default function ContactPage() {
       <section className="py-16 bg-[#fafafa]">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">Estamos Aquí Para Ayudarle</span>
-            <h1 className="text-4xl font-light tracking-wide text-[#3a3a3a] mb-6">Contáctenos</h1>
+            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">
+              {language === 'en' ? 'We Are Here To Help You' : 'Estamos Aquí Para Ayudarle'}
+            </span>
+            <h1 className="text-4xl font-light tracking-wide text-[#3a3a3a] mb-6">
+              {language === 'en' ? 'Contact Us' : 'Contáctenos'}
+            </h1>
             <p className="text-gray-600 mt-8 max-w-2xl mx-auto font-light leading-relaxed">
-              Estamos disponibles para responder a sus preguntas, programar citas o proporcionar información adicional sobre nuestros servicios.
+              {language === 'en' 
+                ? 'We are available to answer your questions, schedule appointments, or provide additional information about our services.'
+                : 'Estamos disponibles para responder a sus preguntas, programar citas o proporcionar información adicional sobre nuestros servicios.'}
             </p>
           </div>
         </div>
@@ -25,7 +50,9 @@ export default function ContactPage() {
       <section className="py-16 bg-white">
         <div className="container-custom max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-light tracking-wide text-[#3a3a3a] mb-6">Información de Contacto</h2>
+            <h2 className="text-2xl font-light tracking-wide text-[#3a3a3a] mb-6">
+              {language === 'en' ? 'Contact Information' : 'Información de Contacto'}
+            </h2>
           </div>
           
           <div className="bg-[#fafafa] rounded-lg p-8 shadow-sm">
@@ -37,7 +64,9 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-base font-medium text-[#3a3a3a]">Dirección</h3>
+                  <h3 className="text-base font-medium text-[#3a3a3a]">
+                    {language === 'en' ? 'Address' : 'Dirección'}
+                  </h3>
                   <p className="text-gray-600 text-sm">
                     Av. Principal #123<br />
                     Colonia Centro<br />
@@ -53,7 +82,9 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-base font-medium text-[#3a3a3a]">Teléfono</h3>
+                  <h3 className="text-base font-medium text-[#3a3a3a]">
+                    {language === 'en' ? 'Phone' : 'Teléfono'}
+                  </h3>
                   <p className="text-gray-600 text-sm">
                     +52 (55) 1234 5678<br />
                     +52 (55) 8765 4321
@@ -69,7 +100,9 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-base font-medium text-[#3a3a3a]">Email</h3>
+                  <h3 className="text-base font-medium text-[#3a3a3a]">
+                    {language === 'en' ? 'Email' : 'Correo Electrónico'}
+                  </h3>
                   <p className="text-gray-600 text-sm">
                     info@ultrasonidos.com<br />
                     citas@ultrasonidos.com
@@ -84,11 +117,13 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-base font-medium text-[#3a3a3a]">Horario de Atención</h3>
+                  <h3 className="text-base font-medium text-[#3a3a3a]">
+                    {language === 'en' ? 'Hours' : 'Horario'}
+                  </h3>
                   <p className="text-gray-600 text-sm">
-                    Lunes - Viernes: 9:00 AM - 7:00 PM<br />
-                    Sábado: 9:00 AM - 2:00 PM<br />
-                    Domingo: Cerrado
+                    {language === 'en' ? 'Monday - Friday: 9:00 AM - 7:00 PM' : 'Lunes - Viernes: 9:00 AM - 7:00 PM'}<br />
+                    {language === 'en' ? 'Saturday: 9:00 AM - 2:00 PM' : 'Sábado: 9:00 AM - 2:00 PM'}<br />
+                    {language === 'en' ? 'Sunday: Closed' : 'Domingo: Cerrado'}
                   </p>
                 </div>
               </div>
@@ -123,9 +158,13 @@ export default function ContactPage() {
       <section className="py-16 bg-[#f5f5f5]">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-light tracking-wide text-[#3a3a3a] mb-6">Nuestra Ubicación</h2>
+            <h2 className="text-3xl font-light tracking-wide text-[#3a3a3a] mb-6">
+              {language === 'en' ? 'Our Location' : 'Nuestra Ubicación'}
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
-              Estamos ubicados en una zona céntrica y de fácil acceso. Visite nuestras instalaciones modernas y confortables.
+              {language === 'en' 
+                ? 'We are located in a central and easily accessible area. Visit our modern and comfortable facilities.'
+                : 'Estamos ubicados en una zona céntrica y de fácil acceso. Visite nuestras instalaciones modernas y confortables.'}
             </p>
           </div>
           
@@ -138,9 +177,13 @@ export default function ContactPage() {
                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                   </svg>
                 </div>
+                <h3 className="text-base font-medium text-[#3a3a3a]">
+                  {language === 'en' ? 'Location' : 'Ubicación'}
+                </h3>
                 <p className="text-gray-600 font-light">
-                  Aquí se mostrará el mapa de ubicación.<br />
-                  Para implementar un mapa real, puede utilizar Google Maps, Mapbox u otro servicio similar.
+                  {language === 'en' 
+                    ? 'The location map will be displayed here. To implement a real map, you can use Google Maps, Mapbox, or a similar service.'
+                    : 'Aquí se mostrará el mapa de ubicación. Para implementar un mapa real, puede utilizar Google Maps, Mapbox u otro servicio similar.'}
                 </p>
               </div>
             </div>
@@ -152,10 +195,16 @@ export default function ContactPage() {
       <section className="py-16">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">Preguntas Frecuentes</span>
-            <h2 className="text-3xl font-light tracking-wide text-[#3a3a3a] mb-6">¿Cómo Podemos Ayudarle?</h2>
+            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">
+              {language === 'en' ? 'Frequently Asked Questions' : 'Preguntas Frecuentes'}
+            </span>
+            <h2 className="text-3xl font-light tracking-wide text-[#3a3a3a] mb-6">
+              {language === 'en' ? 'How Can We Help You?' : '¿Cómo Podemos Ayudarle?'}
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
-              Encuentre respuestas a las preguntas más comunes sobre nuestros servicios y procesos.
+              {language === 'en'
+                ? 'Find answers to the most common questions about our services and processes.'
+                : 'Encuentre respuestas a las preguntas más comunes sobre nuestros servicios y procesos.'}
             </p>
           </div>
           
@@ -163,40 +212,48 @@ export default function ContactPage() {
             <div>
               <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
                 <span className="w-8 h-8 rounded-full bg-[#e8a87c]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#c78550]">1</span>
-                ¿Cómo puedo programar una cita?
+                {language === 'en' ? 'How can I schedule an appointment?' : '¿Cómo puedo programar una cita?'}
               </h3>
               <p className="text-gray-600 font-light leading-relaxed pl-11">
-                Puede programar una cita llamando a nuestro número de teléfono, enviando un correo electrónico o utilizando el formulario de contacto en esta página. Nuestro equipo se pondrá en contacto con usted para confirmar la fecha y hora.
+                {language === 'en'
+                  ? 'You can schedule an appointment by calling our phone number, sending an email, or using the contact form on this page. Our team will contact you to confirm the date and time.'
+                  : 'Puede programar una cita llamando a nuestro número de teléfono, enviando un correo electrónico o utilizando el formulario de contacto en esta página. Nuestro equipo se pondrá en contacto con usted para confirmar la fecha y hora.'}
               </p>
             </div>
             
             <div>
               <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
                 <span className="w-8 h-8 rounded-full bg-[#e8a87c]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#c78550]">2</span>
-                ¿Qué debo llevar a mi cita?
+                {language === 'en' ? 'What should I bring to my appointment?' : '¿Qué debo llevar a mi cita?'}
               </h3>
               <p className="text-gray-600 font-light leading-relaxed pl-11">
-                Es recomendable traer su identificación, tarjeta de seguro médico (si aplica), y cualquier documentación médica relevante o estudios previos relacionados con su consulta.
+                {language === 'en'
+                  ? 'It is advisable to bring your ID, health insurance card (if applicable), and any relevant medical documentation or previous studies related to your consultation.'
+                  : 'Es recomendable traer su identificación, tarjeta de seguro médico (si aplica), y cualquier documentación médica relevante o estudios previos relacionados con su consulta.'}
               </p>
             </div>
             
             <div>
               <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
                 <span className="w-8 h-8 rounded-full bg-[#e8a87c]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#c78550]">3</span>
-                ¿Cuánto tiempo toma un estudio de ultrasonido?
+                {language === 'en' ? 'How long does an ultrasound study take?' : '¿Cuánto tiempo toma un estudio de ultrasonido?'}
               </h3>
               <p className="text-gray-600 font-light leading-relaxed pl-11">
-                La duración varía según el tipo de estudio, pero generalmente toma entre 15 y 45 minutos. Estudios más complejos pueden requerir más tiempo. Le informaremos sobre la duración estimada al programar su cita.
+                {language === 'en'
+                  ? 'The duration varies depending on the type of study, but generally takes between 15 and 45 minutes. More complex studies may require more time. We will inform you about the estimated duration when scheduling your appointment.'
+                  : 'La duración varía según el tipo de estudio, pero generalmente toma entre 15 y 45 minutos. Estudios más complejos pueden requerir más tiempo. Le informaremos sobre la duración estimada al programar su cita.'}
               </p>
             </div>
             
             <div>
               <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
                 <span className="w-8 h-8 rounded-full bg-[#e8a87c]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#c78550]">4</span>
-                ¿Cuándo recibiré mis resultados?
+                {language === 'en' ? 'When will I receive my results?' : '¿Cuándo recibiré mis resultados?'}
               </h3>
               <p className="text-gray-600 font-light leading-relaxed pl-11">
-                Los resultados suelen estar disponibles inmediatamente después del procedimiento. En casos que requieran un análisis más detallado, los resultados estarán listos en un plazo de 24 a 48 horas.
+                {language === 'en'
+                  ? 'Results are usually available immediately after the procedure. In cases that require more detailed analysis, results will be ready within 24 to 48 hours.'
+                  : 'Los resultados suelen estar disponibles inmediatamente después del procedimiento. En casos que requieran un análisis más detallado, los resultados estarán listos en un plazo de 24 a 48 horas.'}
               </p>
             </div>
           </div>

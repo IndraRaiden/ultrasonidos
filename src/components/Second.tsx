@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useLanguage } from "./Navbar";
 
@@ -50,22 +51,15 @@ export default function Second() {
           </div>
           <div className="md:w-1/2">
             <div className="couture-frame">
-              <div className="w-full h-80 md:h-96 flex items-center justify-center relative overflow-hidden bg-[#fafafa]">
+              <div className="w-full h-80 md:h-96 relative overflow-hidden bg-[#fafafa]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#e8a87c]/10 to-transparent opacity-50"></div>
-                <div className="relative z-10 flex flex-col items-center">
-                  <span className="gold-text text-4xl font-light tracking-widest mb-4">ULTRA</span>
-                  <div className="w-16 h-px bg-[#e8a87c]/50 mb-4"></div>
-                  <p className="text-center text-gray-600 font-light tracking-wider">
-                    {currentLanguage === 'en' ? 'EXCLUSIVE TECHNOLOGY' : 'TECNOLOGÍA EXCLUSIVA'}
-                  </p>
-                </div>
-                {/* Replace with actual image when available */}
-                {/* <Image 
-                  src="/images/hero.jpg" 
+                <Image 
+                  src="/mainindex/ultrasound.jpg" 
                   alt="Ultrasonidos tecnología" 
                   fill
                   className="object-cover"
-                /> */}
+                  priority
+                />
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@
 
 import { useState, createContext, useContext } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 // Create a context for language
@@ -47,15 +48,15 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
             <Link href="/" className="flex items-center group">
-              <div className="w-12 h-12 relative">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#f6c9a0] to-[#c78550] opacity-75 blur-sm group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0.5 rounded-full bg-[#ffffff] flex items-center justify-center">
-                  <span className="gold-text font-light text-2xl tracking-widest">U</span>
-                </div>
-              </div>
-              <div className="ml-4">
-                <span className="block text-xs uppercase tracking-[0.2em] text-[#c78550]/80">Luxury Care</span>
-                <span className="block text-xl uppercase tracking-[0.15em] font-light gradient-text">Ultrasonidos</span>
+              <div className="relative h-12">
+                <Image 
+                  src="/hibaby-logo.png" 
+                  alt="HiBaby Logo" 
+                  width={120} 
+                  height={48} 
+                  className="object-contain h-full w-auto"
+                  priority
+                />
               </div>
             </Link>
           </div>

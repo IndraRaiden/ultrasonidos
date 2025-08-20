@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,13 +8,15 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start mb-3">
-              <div className="w-8 h-8 relative mr-3">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#f6c9a0]/50 to-[#c78550]/50 opacity-75 blur-sm"></div>
-                <div className="absolute inset-0.5 rounded-full bg-[#ffffff] flex items-center justify-center">
-                  <span className="gold-text font-light text-sm tracking-widest">U</span>
-                </div>
+              <div className="relative h-10 mr-3">
+                <Image 
+                  src="/hibaby-logo.png" 
+                  alt="HiBaby Logo" 
+                  width={100} 
+                  height={40} 
+                  className="object-contain h-full w-auto"
+                />
               </div>
-              <span className="gold-text text-sm uppercase tracking-[0.15em] font-light">Ultrasonidos</span>
             </div>
             <p className="text-gray-500 text-xs font-light">© {new Date().getFullYear()} Todos los derechos reservados</p>
           </div>

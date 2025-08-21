@@ -31,7 +31,7 @@ export default function AboutPage() {
       <section className="py-16 bg-[#fafafa]">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#6642c8]/80 mb-4 block">
               {language === 'en' ? 'Get to know us' : 'Conózcanos'}
             </span>
             <h1 className="text-4xl font-light tracking-wide text-[#3a3a3a] mb-6">
@@ -52,11 +52,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="aspect-[4/3] bg-[#f5f5f5] relative overflow-hidden rounded-sm">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#e8a87c]/10 to-transparent opacity-30"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-30"></div>
                 {/* Replace with your actual image */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 rounded-full bg-[#ffffff] border border-[#e8a87c]/30 flex items-center justify-center">
-                    <span className="gold-text font-light text-5xl tracking-widest">U</span>
+                  <div className="w-32 h-32 rounded-full bg-[#ffffff] border border-[#8a63d2]/30 flex items-center justify-center">
+                    <span className="purple-text font-light text-5xl tracking-widest">U</span>
                   </div>
                 </div>
               </div>
@@ -78,17 +78,17 @@ export default function AboutPage() {
               </p>
               <div className="flex items-center space-x-6 mt-8">
                 <div>
-                  <div className="text-3xl font-light text-[#c78550]">15+</div>
+                  <div className="text-3xl font-light text-[#6642c8]">15+</div>
                   <div className="text-sm text-gray-500 uppercase tracking-wider">{language === 'en' ? 'Years of experience' : 'Años de experiencia'}</div>
                 </div>
-                <div className="h-12 w-px bg-[#e8a87c]/20"></div>
+                <div className="h-12 w-px bg-[#8a63d2]/20"></div>
                 <div>
-                  <div className="text-3xl font-light text-[#c78550]">5,000+</div>
+                  <div className="text-3xl font-light text-[#6642c8]">5,000+</div>
                   <div className="text-sm text-gray-500 uppercase tracking-wider">{language === 'en' ? 'Patients served' : 'Pacientes atendidos'}</div>
                 </div>
-                <div className="h-12 w-px bg-[#e8a87c]/20"></div>
+                <div className="h-12 w-px bg-[#8a63d2]/20"></div>
                 <div>
-                  <div className="text-3xl font-light text-[#c78550]">100%</div>
+                  <div className="text-3xl font-light text-[#6642c8]">100%</div>
                   <div className="text-sm text-gray-500 uppercase tracking-wider">{language === 'en' ? 'Satisfaction' : 'Satisfacción'}</div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function AboutPage() {
       <section className="py-16 bg-[#f5f5f5]">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#6642c8]/80 mb-4 block">
               {language === 'en' ? 'What defines us' : 'Lo que nos define'}
             </span>
             <h2 className="text-3xl font-light tracking-wide text-[#3a3a3a] mb-6">
@@ -116,8 +116,8 @@ export default function AboutPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 rounded-full bg-[#e8a87c]/10 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-[#c78550]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <div className="w-16 h-16 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#6642c8]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
               </div>
@@ -132,8 +132,8 @@ export default function AboutPage() {
             </div>
             
             <div className="bg-white p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 rounded-full bg-[#e8a87c]/10 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-[#c78550]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <div className="w-16 h-16 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#6642c8]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
                 </svg>
               </div>
@@ -148,8 +148,8 @@ export default function AboutPage() {
             </div>
             
             <div className="bg-white p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 rounded-full bg-[#e8a87c]/10 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-[#c78550]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <div className="w-16 h-16 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#6642c8]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
                 </svg>
               </div>

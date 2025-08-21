@@ -29,7 +29,7 @@ export default function ServicesPage() {
       <section className="py-16 bg-[#fafafa]">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#6642c8]/80 mb-4 block">
               {language === 'en' ? 'Our Services' : 'Nuestros Servicios'}
             </span>
             <h1 className="text-4xl font-light tracking-wide text-[#3a3a3a] mb-6">
@@ -56,10 +56,10 @@ export default function ServicesPage() {
                   alt="Obstetric Ultrasound" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#e8a87c]/20 to-transparent opacity-30"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/20 to-transparent opacity-30"></div>
               </div>
               <div className="service-info">
-                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#c78550] transition-colors duration-300">
+                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#6642c8] transition-colors duration-300">
                   {language === 'en' ? 'Obstetric Ultrasound' : 'Ultrasonido Obstétrico'}
                 </h2>
                 <p className="text-gray-600 mb-6 font-light leading-relaxed">
@@ -69,7 +69,7 @@ export default function ServicesPage() {
                 </p>
                 <ul className="mb-8 space-y-3">
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">
@@ -77,7 +77,7 @@ export default function ServicesPage() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">
@@ -85,7 +85,7 @@ export default function ServicesPage() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">
@@ -110,10 +110,10 @@ export default function ServicesPage() {
                   alt="Morphological Ultrasound" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#e8a87c]/20 to-transparent opacity-30"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/20 to-transparent opacity-30"></div>
               </div>
               <div className="service-info">
-                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#c78550] transition-colors duration-300">
+                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#6642c8] transition-colors duration-300">
                   {language === 'en' ? 'Morphological Ultrasound' : 'Ultrasonido Morfológico'}
                 </h2>
                 <p className="text-gray-600 mb-6 font-light leading-relaxed">
@@ -123,7 +123,7 @@ export default function ServicesPage() {
                 </p>
                 <ul className="mb-8 space-y-3">
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">
@@ -131,7 +131,7 @@ export default function ServicesPage() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">
@@ -139,7 +139,7 @@ export default function ServicesPage() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">
@@ -164,10 +164,10 @@ export default function ServicesPage() {
                   alt="Fetal Doppler Ultrasound" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#e8a87c]/20 to-transparent opacity-30"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/20 to-transparent opacity-30"></div>
               </div>
               <div className="service-info">
-                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#c78550] transition-colors duration-300">
+                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#6642c8] transition-colors duration-300">
                   {language === 'en' ? 'Fetal Doppler Ultrasound' : 'Ultrasonido Doppler Fetal'}
                 </h2>
                 <p className="text-gray-600 mb-6 font-light leading-relaxed">
@@ -177,7 +177,7 @@ export default function ServicesPage() {
                 </p>
                 <ul className="mb-8 space-y-3">
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">
@@ -185,7 +185,7 @@ export default function ServicesPage() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">
@@ -193,7 +193,7 @@ export default function ServicesPage() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">
@@ -218,10 +218,10 @@ export default function ServicesPage() {
                   alt="4D Emotional Ultrasound" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#e8a87c]/20 to-transparent opacity-30"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/20 to-transparent opacity-30"></div>
               </div>
               <div className="service-info">
-                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#c78550] transition-colors duration-300">
+                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#6642c8] transition-colors duration-300">
                   {language === 'en' ? '4D Emotional Ultrasound' : 'Ultrasonido 4D Emocional'}
                 </h2>
                 <p className="text-gray-600 mb-6 font-light leading-relaxed">
@@ -231,7 +231,7 @@ export default function ServicesPage() {
                 </p>
                 <ul className="mb-8 space-y-3">
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">
@@ -239,7 +239,7 @@ export default function ServicesPage() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">
@@ -247,7 +247,7 @@ export default function ServicesPage() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c78550] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
                     <span className="text-gray-600 font-light">

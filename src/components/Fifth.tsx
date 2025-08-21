@@ -23,11 +23,11 @@ export default function Fifth() {
   return (
     <section className="py-24 bg-[#f5f5f5]">
       <div className="container-custom">
-        <div className="relative overflow-hidden border border-[#e8a87c]/30 bg-[#ffffff]">
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#e8a87c]/40 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent"></div>
+        <div className="relative overflow-hidden border border-[#8a63d2]/30 bg-[#ffffff]">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#8a63d2]/40 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#a276f9]/30 to-transparent"></div>
           <div className="py-16 px-8 md:px-16 text-center">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#6642c8]/80 mb-4 block">
               {currentLanguage === 'en' ? 'Exclusive Experience' : 'Experiencia Exclusiva'}
             </span>
             <h2 className="text-3xl font-light mb-6 tracking-wide text-[#3a3a3a]">
@@ -46,12 +46,12 @@ export default function Fifth() {
             </p>
             <Link 
               href={currentLanguage === 'en' ? '/contact' : '/contacto'} 
-              className="btn-primary border border-[#e8a87c]/40 bg-transparent hover:bg-[#e8a87c]/10 text-[#c78550] hover:text-[#3a3a3a] group relative overflow-hidden inline-block"
+              className="btn-primary border border-[#8a63d2]/40 bg-transparent hover:bg-[#8a63d2]/10 text-[#6642c8] hover:text-[#3a3a3a] group relative overflow-hidden inline-block"
             >
               <span className="relative z-10 uppercase tracking-widest text-xs font-light">
                 {currentLanguage === 'en' ? 'Request Consultation' : 'Solicitar Consulta'}
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#e8a87c]/0 via-[#e8a87c]/30 to-[#e8a87c]/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#8a63d2]/0 via-[#8a63d2]/30 to-[#8a63d2]/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
             </Link>
           </div>
         </div>

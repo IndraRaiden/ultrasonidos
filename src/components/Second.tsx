@@ -27,13 +27,13 @@ export default function Second() {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-12 md:mb-0 md:pr-12">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#6642c8]/80 mb-4 block">
               {currentLanguage === 'en' ? 'Exclusive Experience' : 'Experiencia Exclusiva'}
             </span>
             <h1 className="text-4xl md:text-5xl font-light mb-8 tracking-wide leading-tight">
               {currentLanguage === 'en' 
-                ? <>High <span className="gold-text font-normal">precision</span> <span className="gold-text font-normal">ultrasound</span> technology</>
-                : <>Tecnología de <span className="gold-text font-normal">ultrasonido</span> de alta <span className="gold-text font-normal">precisión</span></>}
+                ? <>High <span className="purple-text font-normal">precision</span> <span className="purple-text font-normal">ultrasound</span> technology</>
+                : <>Tecnología de <span className="purple-text font-normal">ultrasonido</span> de alta <span className="purple-text font-normal">precisión</span></>}
             </h1>
             <p className="text-gray-600 mb-10 font-light leading-relaxed">
               {currentLanguage === 'en' 
@@ -52,7 +52,7 @@ export default function Second() {
           <div className="md:w-1/2">
             <div className="couture-frame">
               <div className="w-full h-80 md:h-96 relative overflow-hidden bg-[#fafafa]">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#e8a87c]/10 to-transparent opacity-50"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-50"></div>
                 <Image 
                   src="/mainindex/ultrasound.jpg" 
                   alt="Ultrasonidos tecnología" 

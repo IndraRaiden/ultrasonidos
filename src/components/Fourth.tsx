@@ -28,7 +28,7 @@ export default function Fourth() {
           <div className="md:w-1/2 order-2 md:order-1">
             <div className="couture-frame">
               <div className="w-full aspect-[4/5] flex items-center justify-center relative overflow-hidden bg-[#f5f5f5]">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#e8a87c]/10 to-transparent opacity-30"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-30"></div>
                 <div className="relative z-10 flex flex-col items-center">
                   <span className="luxury-quote text-4xl font-light mb-4">"</span>
                   <p className="text-center text-gray-600 font-light tracking-wider px-8 italic">
@@ -49,7 +49,7 @@ export default function Fourth() {
             </div>
           </div>
           <div className="md:w-1/2 order-1 md:order-2">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#c78550]/80 mb-4 block">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#6642c8]/80 mb-4 block">
               {currentLanguage === 'en' ? 'Our Philosophy' : 'Nuestra Filosofía'}
             </span>
             <h2 className="section-heading text-3xl mb-8">
@@ -66,7 +66,7 @@ export default function Fourth() {
                 : 'Con una trayectoria de excelencia, nuestro selecto equipo de expertos está comprometido con ofrecer un servicio impecable y personalizado que supera las expectativas de nuestra distinguida clientela.'}
             </p>
             <div className="flex items-center">
-              <div className="w-12 h-px bg-[#e8a87c]/40 mr-6"></div>
+              <div className="w-12 h-px bg-[#8a63d2]/40 mr-6"></div>
               <Link href="/about" className="btn-secondary">
                 {currentLanguage === 'en' ? 'Discover Our History' : 'Descubrir Nuestra Historia'}
               </Link>

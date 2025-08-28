@@ -21,6 +21,151 @@ export default function ServicesPage() {
       document.removeEventListener('languageChange', handleLanguageChange as EventListener);
     };
   }, []);
+  
+  // Services data in both languages to keep bios and prices consistent with products
+  const servicesEn = [
+    {
+      id: 'quick-peek',
+      title: 'Hi Baby Quick Peek',
+      image: '/ultrasounds/Ultrasoundv1.webp',
+      price: 53,
+      features: [
+        "6+ weeks - 2D ultrasound - 3 Black and white prints - Hear your Baby's Heartbeat",
+        'Add on a sneak peek in 4D for $15 for a 4x6 Color print',
+      ],
+    },
+    {
+      id: 'gender-determination',
+      title: 'Gender Determination',
+      image: '/mainindex/ultrasound.jpg',
+      price: 69,
+      features: [
+        '14+ weeks - 3 Black and white prints',
+        'TOP SECRET ENVELOPE IF REQUESTED',
+        'Add on a sneak peek in 4D for $15 for a 4x6 Color print',
+        "Add on baby's heartbeat in a stuffed animal $35",
+      ],
+    },
+    {
+      id: 'gender-plus',
+      title: 'Gender Plus',
+      image: '/ultrasounds/Ultrasoundv2.webp',
+      price: 85,
+      features: [
+        '14+ weeks - 3 Black and white prints',
+        'Video & All Pictures',
+        '1 4x6 Black and white Picture print',
+        '1 Baby Onesie • TOP SECRET ENVELOPE IF REQUESTED',
+        'Add on a sneak peek in 4D for $15 for a 4x6 Color print',
+      ],
+    },
+    {
+      id: 'see-baby-color',
+      title: 'See Baby in Color',
+      image: '/ultrasounds/R.jpeg',
+      price: 100,
+      features: [
+        '1 4x6 4D Color Print or 2 Prints $120',
+        "3 Black and white prints - Hear baby's heartbeat - Video & All pictures",
+        "Add on baby's heartbeat in a stuffed animal $35",
+      ],
+    },
+    {
+      id: 'see-baby-color-plus',
+      title: 'See Baby in Color plus',
+      image: '/ultrasounds/Ultrasoundv3.jpg',
+      price: 150,
+      features: [
+        '1 4x6 color print - 1 5x7 color print',
+        '3 Black and white prints - 1 Baby onesie',
+        "1 Stuffed animal with baby's Heartbeat - Video & All pictures",
+      ],
+    },
+    {
+      id: 'multiple-visits',
+      title: 'Hi Baby Multiple Visits! 7 Visits',
+      image: '/ultrasounds/Ultrasoundv2.webp',
+      price: 450,
+      features: [
+        '1 4x6 color print & Black/whites each visit',
+        'Video & All pictures each visit',
+        "1 Baby onesie - 1 Stuffed animal with baby's Heartbeat",
+      ],
+    },
+  ];
+
+  const servicesEs = [
+    {
+      id: 'quick-peek',
+      title: 'Hi Baby Quick Peek',
+      image: '/ultrasounds/Ultrasoundv1.webp',
+      price: 53,
+      features: [
+        "6+ semanas - Ultrasonido 2D - 3 impresiones en blanco y negro - Escucha el latido de tu bebé",
+        'Agrega un vistazo en 4D por $15 con impresión a color 4x6',
+      ],
+    },
+    {
+      id: 'gender-determination',
+      title: 'Determinación de Género',
+      image: '/mainindex/ultrasound.jpg',
+      price: 69,
+      features: [
+        '14+ semanas - 3 impresiones en blanco y negro',
+        'SOBRE SECRETO SI SE SOLICITA',
+        'Agrega un vistazo en 4D por $15 con impresión a color 4x6',
+        'Agrega el latido del bebé en un peluche $35',
+      ],
+    },
+    {
+      id: 'gender-plus',
+      title: 'Género Plus',
+      image: '/ultrasounds/Ultrasoundv2.webp',
+      price: 85,
+      features: [
+        '14+ semanas - 3 impresiones en blanco y negro',
+        'Video y todas las fotos',
+        '1 impresión 4x6 en blanco y negro',
+        '1 mameluco para bebé • SOBRE SECRETO SI SE SOLICITA',
+        'Agrega un vistazo en 4D por $15 con impresión a color 4x6',
+      ],
+    },
+    {
+      id: 'see-baby-color',
+      title: 'Ver al Bebé a Color',
+      image: '/ultrasounds/R.jpeg',
+      price: 100,
+      features: [
+        '1 impresión 4x6 4D a color o 2 impresiones $120',
+        '3 impresiones en blanco y negro - Escucha el latido del bebé - Video y todas las fotos',
+        'Agrega el latido del bebé en un peluche $35',
+      ],
+    },
+    {
+      id: 'see-baby-color-plus',
+      title: 'Ver al Bebé a Color Plus',
+      image: '/ultrasounds/Ultrasoundv3.jpg',
+      price: 150,
+      features: [
+        '1 impresión a color 4x6 - 1 impresión a color 5x7',
+        '3 impresiones en blanco y negro - 1 mameluco para bebé',
+        '1 peluche con el latido del bebé - Video y todas las fotos',
+      ],
+    },
+    {
+      id: 'multiple-visits',
+      title: '¡Hi Baby Visitas Múltiples! 7 Visitas',
+      image: '/ultrasounds/Ultrasoundv2.webp',
+      price: 450,
+      features: [
+        '1 impresión a color 4x6 y blanco/negro en cada visita',
+        'Video y todas las fotos en cada visita',
+        '1 mameluco para bebé - 1 peluche con el latido del bebé',
+      ],
+    },
+  ];
+
+  const services = language === 'en' ? servicesEn : servicesEs;
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navbar is now in the layout file */}
@@ -47,222 +192,46 @@ export default function ServicesPage() {
       {/* Services Section */}
       <section className="py-16">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Service 1 */}
-            <div className="service-card group">
-              <div className="aspect-[16/9] relative overflow-hidden mb-6">
-                <img 
-                  src="/ultrasounds/Ultrasoundv1.webp" 
-                  alt="Obstetric Ultrasound" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/20 to-transparent opacity-30"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {services.map((s) => (
+              <div key={s.id} className="service-card group h-full">
+                <div className="aspect-[16/9] relative overflow-hidden mb-6">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/20 to-transparent opacity-30"></div>
+                </div>
+                <div className="service-info flex flex-col h-full">
+                  <h3 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#6642c8] transition-colors duration-300">
+                    {s.title}
+                  </h3>
+                  <ul className="mb-8 space-y-3">
+                    {s.features.map((f, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                        </svg>
+                        <span className="text-gray-600 font-light">{f}</span>
+                      </li>
+                    ))}
+                    {/* Price as part of the bio/description list */}
+                    <li key={`${s.id}-price`} className="flex items-start">
+                      <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      <span className="text-[#3a3a3a] font-medium">{language === 'en' ? `Price: $${s.price}` : `Precio: $${s.price}`}</span>
+                    </li>
+                  </ul>
+                  <div className="mt-auto">
+                    <div className="inline-block px-4 py-2 rounded-xl bg-[#6642c8]/10 text-[#6642c8] font-semibold text-xl">
+                      {`$${s.price}`}
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="service-info">
-                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#6642c8] transition-colors duration-300">
-                  {language === 'en' ? 'Obstetric Ultrasound' : 'Ultrasonido Obstétrico'}
-                </h2>
-                <p className="text-gray-600 mb-6 font-light leading-relaxed">
-                  {language === 'en' 
-                    ? 'Our obstetric ultrasound services offer unparalleled precision using state-of-the-art technology. Each procedure is performed by highly trained specialists who provide personalized and detailed care to monitor your baby\'s development.'
-                    : 'Nuestros servicios de ultrasonido obstétrico ofrecen una precisión incomparable utilizando tecnología de última generación. Cada procedimiento es realizado por especialistas altamente capacitados que brindan una atención personalizada y detallada para monitorear el desarrollo de su bebé.'}
-                </p>
-                <ul className="mb-8 space-y-3">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'High resolution 2D, 3D and 4D ultrasound' : 'Ultrasonido 2D, 3D y 4D de alta resolución'}
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'Detailed evaluation of fetal development' : 'Evaluación detallada del desarrollo fetal'}
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'Warm and personalized care' : 'Atención cálida y personalizada'}
-                    </span>
-                  </li>
-                </ul>
-                <Link href="/services/ultrasonido-obstetrico" className="btn-primary">
-                  <span>{language === 'en' ? 'More information' : 'Más información'}</span>
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                  </svg>
-                </Link>
-              </div>
-            </div>
-
-            {/* Service 2 */}
-            <div className="service-card group">
-              <div className="aspect-[16/9] relative overflow-hidden mb-6">
-                <img 
-                  src="/ultrasounds/Ultrasoundv2.webp" 
-                  alt="Morphological Ultrasound" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/20 to-transparent opacity-30"></div>
-              </div>
-              <div className="service-info">
-                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#6642c8] transition-colors duration-300">
-                  {language === 'en' ? 'Morphological Ultrasound' : 'Ultrasonido Morfológico'}
-                </h2>
-                <p className="text-gray-600 mb-6 font-light leading-relaxed">
-                  {language === 'en' 
-                    ? 'Our detailed morphological ultrasound allows for a thorough evaluation of your baby\'s anatomy, detecting possible anomalies and confirming healthy development. Performed by specialists in maternal-fetal medicine with extensive experience.'
-                    : 'Nuestro ultrasonido morfológico detallado permite evaluar minuciosamente la anatomía de su bebé, detectando posibles anomalías y confirmando su desarrollo saludable. Realizado por especialistas en medicina materno-fetal con amplia experiencia.'}
-                </p>
-                <ul className="mb-8 space-y-3">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'Complete anatomical evaluation' : 'Evaluación anatómica completa'}
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'Early detection of anomalies' : 'Detección temprana de anomalías'}
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'Detailed medical report' : 'Informe médico detallado'}
-                    </span>
-                  </li>
-                </ul>
-                <Link href="/services/ultrasonido-morfologico" className="btn-primary">
-                  <span>{language === 'en' ? 'More information' : 'Más información'}</span>
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                  </svg>
-                </Link>
-              </div>
-            </div>
-
-            {/* Service 3 */}
-            <div className="service-card group">
-              <div className="aspect-[16/9] relative overflow-hidden mb-6">
-                <img 
-                  src="/ultrasounds/Ultrasoundv3.jpg" 
-                  alt="Fetal Doppler Ultrasound" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/20 to-transparent opacity-30"></div>
-              </div>
-              <div className="service-info">
-                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#6642c8] transition-colors duration-300">
-                  {language === 'en' ? 'Fetal Doppler Ultrasound' : 'Ultrasonido Doppler Fetal'}
-                </h2>
-                <p className="text-gray-600 mb-6 font-light leading-relaxed">
-                  {language === 'en' 
-                    ? 'Fetal Doppler ultrasound evaluates blood flow in the umbilical cord, placenta, and baby\'s blood vessels, providing vital information about their well-being. This specialized technique allows for the detection of possible complications and ensures optimal development.'
-                    : 'El ultrasonido Doppler fetal evalúa el flujo sanguíneo en el cordón umbilical, la placenta y los vasos sanguíneos del bebé, proporcionando información vital sobre su bienestar. Esta técnica especializada permite detectar posibles complicaciones y asegurar un desarrollo óptimo.'}
-                </p>
-                <ul className="mb-8 space-y-3">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'Evaluation of fetal blood flow' : 'Evaluación del flujo sanguíneo fetal'}
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'Monitoring of placental function' : 'Monitoreo de la función placentaria'}
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'Early detection of complications' : 'Detección temprana de complicaciones'}
-                    </span>
-                  </li>
-                </ul>
-                <Link href="/services/doppler-fetal" className="btn-primary">
-                  <span>{language === 'en' ? 'More information' : 'Más información'}</span>
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                  </svg>
-                </Link>
-              </div>
-            </div>
-
-            {/* Service 4 */}
-            <div className="service-card group">
-              <div className="aspect-[16/9] relative overflow-hidden mb-6">
-                <img 
-                  src="/ultrasounds/R.jpeg" 
-                  alt="4D Emotional Ultrasound" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/20 to-transparent opacity-30"></div>
-              </div>
-              <div className="service-info">
-                <h2 className="text-2xl font-light tracking-wider mb-4 text-[#3a3a3a] group-hover:text-[#6642c8] transition-colors duration-300">
-                  {language === 'en' ? '4D Emotional Ultrasound' : 'Ultrasonido 4D Emocional'}
-                </h2>
-                <p className="text-gray-600 mb-6 font-light leading-relaxed">
-                  {language === 'en' 
-                    ? 'Experience the unique opportunity to see your baby in real time with our 4D emotional ultrasound. Observe their movements, facial expressions, and features with exceptional image quality, creating a special bond before birth and taking home unforgettable memories.'
-                    : 'Viva la experiencia única de ver a su bebé en tiempo real con nuestro ultrasonido 4D emocional. Observe sus movimientos, expresiones faciales y características con una calidad de imagen excepcional, creando un vínculo especial antes del nacimiento y llevándose a casa recuerdos inolvidables.'}
-                </p>
-                <ul className="mb-8 space-y-3">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'Real-time high-definition images' : 'Imágenes en alta definición en tiempo real'}
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'Video and photo recording' : 'Grabación de video y fotografías'}
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    <span className="text-gray-600 font-light">
-                      {language === 'en' ? 'Emotional experience for the whole family' : 'Experiencia emocional para toda la familia'}
-                    </span>
-                  </li>
-                </ul>
-                <Link href="/services/ultrasonido-4d" className="btn-primary">
-                  <span>{language === 'en' ? 'More information' : 'Más información'}</span>
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                  </svg>
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -279,7 +248,7 @@ export default function ServicesPage() {
                 ? 'We are here to accompany you at every stage of your pregnancy. Our team of maternal-fetal medicine specialists is ready to provide you and your baby with the personalized care you deserve.'
                 : 'Estamos aquí para acompañarla en cada etapa de su embarazo. Nuestro equipo de especialistas en medicina materno-fetal está listo para brindarle la atención personalizada que usted y su bebé merecen.'}
             </p>
-            <Link href="/contacto" className="btn-primary-lg">
+            <Link href="/contact" className="btn-primary-lg">
               <span>{language === 'en' ? 'Contact us today' : 'Contáctenos hoy'}</span>
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>

@@ -53,12 +53,13 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-[4/3] bg-[#f5f5f5] relative overflow-hidden rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-30"></div>
-                {/* Replace with your actual image */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 rounded-full bg-[#ffffff] border border-[#8a63d2]/30 flex items-center justify-center">
-                    <span className="purple-text font-light text-5xl tracking-widest">U</span>
-                  </div>
-                </div>
+                <Image
+                  src="/ultrasounds/DSC09280.png"
+                  alt="About Ultrasonidos"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#f5f5f5] rounded-sm -z-10"></div>
             </div>

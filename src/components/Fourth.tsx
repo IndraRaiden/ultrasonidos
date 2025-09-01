@@ -27,24 +27,14 @@ export default function Fourth() {
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="md:w-1/2 order-2 md:order-1">
             <div className="couture-frame">
-              <div className="w-full aspect-[4/5] flex items-center justify-center relative overflow-hidden bg-[#f5f5f5]">
+              <div className="w-full aspect-[4/5] relative overflow-hidden bg-[#f5f5f5]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-30"></div>
-                <div className="relative z-10 flex flex-col items-center">
-                  <span className="luxury-quote text-4xl font-light mb-4">"</span>
-                  <p className="text-center text-gray-600 font-light tracking-wider px-8 italic">
-                    {currentLanguage === 'en' 
-                      ? 'Excellence is not an act, but a habit in everything we do'
-                      : 'La excelencia no es un acto, sino un hábito en todo lo que hacemos'}
-                  </p>
-                  <span className="luxury-quote text-4xl font-light mt-4 rotate-180">"</span>
-                </div>
-                {/* Replace with actual image when available */}
-                {/* <Image 
-                  src="/images/company.jpg" 
+                <Image 
+                  src="/About-min.png" 
                   alt="Nuestra empresa" 
                   fill
                   className="object-cover"
-                /> */}
+                />
               </div>
             </div>
           </div>
@@ -65,12 +55,6 @@ export default function Fourth() {
                 ? 'With a trajectory of excellence, our select team of experts is committed to providing impeccable and personalized service that exceeds the expectations of our distinguished clientele.'
                 : 'Con una trayectoria de excelencia, nuestro selecto equipo de expertos está comprometido con ofrecer un servicio impecable y personalizado que supera las expectativas de nuestra distinguida clientela.'}
             </p>
-            <div className="flex items-center">
-              <div className="w-12 h-px bg-[#8a63d2]/40 mr-6"></div>
-              <Link href="/about" className="btn-secondary">
-                {currentLanguage === 'en' ? 'Discover Our History' : 'Descubrir Nuestra Historia'}
-              </Link>
-            </div>
           </div>
         </div>
       </div>

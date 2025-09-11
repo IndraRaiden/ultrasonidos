@@ -30,18 +30,32 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="py-16 bg-[#fafafa]">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#6642c8]/80 mb-4 block">
-              {language === 'en' ? 'We Are Here To Help You' : 'Estamos Aquí Para Ayudarle'}
-            </span>
-            <h1 className="text-4xl font-light tracking-wide text-[#3a3a3a] mb-6">
-              {language === 'en' ? 'Contact Us' : 'Contáctenos'}
-            </h1>
-            <p className="text-gray-600 mt-8 max-w-2xl mx-auto font-light leading-relaxed">
-              {language === 'en' 
-                ? 'We are available to answer your questions, schedule appointments, or provide additional information about our services.'
-                : 'Estamos disponibles para responder a sus preguntas, programar citas o proporcionar información adicional sobre nuestros servicios.'}
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="text-left">
+              <span className="text-xs uppercase tracking-[0.2em] text-[#6642c8]/80 mb-4 block">
+                {language === 'en' ? 'We Are Here To Help You' : 'Estamos Aquí Para Ayudarle'}
+              </span>
+              <h1 className="text-4xl font-light tracking-wide text-[#3a3a3a] mb-6">
+                {language === 'en' ? 'Contact Us' : 'Contáctenos'}
+              </h1>
+              <p className="text-gray-600 mt-8 max-w-2xl font-light leading-relaxed">
+                {language === 'en' 
+                  ? 'We are available to answer your questions, schedule appointments, or provide additional information about our services.'
+                  : 'Estamos disponibles para responder a sus preguntas, programar citas o proporcionar información adicional sobre nuestros servicios.'}
+              </p>
+            </div>
+            <div className="flex justify-center md:justify-end">
+              <div className="relative overflow-hidden rounded-lg shadow-lg w-full max-w-md">
+                <Image
+                  src="/DSC09282.png"
+                  alt={language === 'en' ? 'Contact us image' : 'Imagen de contacto'}
+                  width={600}
+                  height={450}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -56,54 +70,68 @@ export default function ContactPage() {
           </div>
           
           <div className="bg-[#fafafa] rounded-lg p-8 shadow-sm">
-            <div className="space-y-8">
-              <div className="flex items-center">
-                <div className="w-10 h-10 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-5 h-5 text-[#6642c8]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="md:col-span-2 space-y-8">
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-[#6642c8]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-base font-medium text-[#3a3a3a]">
+                      {language === 'en' ? 'Address' : 'Dirección'}
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      Av. Principal #123<br />
+                      Colonia Centro<br />
+                      Ciudad de México, CP 12345
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-base font-medium text-[#3a3a3a]">
-                    {language === 'en' ? 'Address' : 'Dirección'}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Av. Principal #123<br />
-                    Colonia Centro<br />
-                    Ciudad de México, CP 12345
-                  </p>
+                
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-[#6642c8]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-base font-medium text-[#3a3a3a]">
+                      {language === 'en' ? 'Phone' : 'Teléfono'}
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      +1 619-292-3600
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-[#6642c8]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-base font-medium text-[#3a3a3a]">
+                      {language === 'en' ? 'Hours' : 'Horario'}
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      {language === 'en' ? 'Daily: 10:00 AM - 8:00 PM' : 'Todos los días: 10:00 AM - 8:00 PM'}
+                    </p>
+                  </div>
                 </div>
               </div>
               
-              <div className="flex items-center">
-                <div className="w-10 h-10 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-5 h-5 text-[#6642c8]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-base font-medium text-[#3a3a3a]">
-                    {language === 'en' ? 'Phone' : 'Teléfono'}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    +1 619-292-3600
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="w-10 h-10 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-5 h-5 text-[#6642c8]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-base font-medium text-[#3a3a3a]">
-                    {language === 'en' ? 'Hours' : 'Horario'}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    {language === 'en' ? 'Daily: 10:00 AM - 8:00 PM' : 'Todos los días: 10:00 AM - 8:00 PM'}
-                  </p>
+              <div className="flex items-center justify-center h-full">
+                <div className="relative overflow-hidden rounded-lg shadow-md max-w-[380px]">
+                  <Image
+                    src="/DSC09261.jpg"
+                    alt={language === 'en' ? 'Our office image' : 'Imagen de nuestra oficina'}
+                    width={380}
+                    height={380}
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -151,34 +179,63 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-light tracking-wide text-[#3a3a3a] mb-6">
-              {language === 'en' ? 'Our Location' : 'Nuestra Ubicación'}
+              {language === 'en' ? 'Our Locations' : 'Nuestras Ubicaciones'}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
               {language === 'en' 
-                ? 'We are located in a central and easily accessible area. Visit our modern and comfortable facilities.'
-                : 'Estamos ubicados en una zona céntrica y de fácil acceso. Visite nuestras instalaciones modernas y confortables.'}
+                ? 'We have multiple locations to serve you better. Visit our modern and comfortable facilities at any of our centers.'
+                : 'Tenemos múltiples ubicaciones para atenderle mejor. Visite nuestras instalaciones modernas y confortables en cualquiera de nuestros centros.'}
             </p>
           </div>
           
-          <div className="aspect-[16/9] bg-[#e0e0e0] relative overflow-hidden">
-            {/* Replace with actual map component or iframe */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#ffffff] border border-[#8a63d2]/30 flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-[#6642c8]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="text-base font-medium text-[#3a3a3a]">
-                  {language === 'en' ? 'Location' : 'Ubicación'}
-                </h3>
-                <p className="text-gray-600 font-light">
-                  {language === 'en' 
-                    ? 'The location map will be displayed here. To implement a real map, you can use Google Maps, Mapbox, or a similar service.'
-                    : 'Aquí se mostrará el mapa de ubicación. Para implementar un mapa real, puede utilizar Google Maps, Mapbox u otro servicio similar.'}
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            {/* First Location */}
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <h3 className="text-xl font-light text-center py-3 bg-white border-b border-gray-100">
+                {language === 'en' ? 'Location 1' : 'Ubicación 1'}
+              </h3>
+              <div className="aspect-[16/9] w-full">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.892787364381!2d-117.09117450232068!3d32.67448497103006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d953ff246b6c63%3A0xc00e6ab8e7de32e4!2sHi%20Baby%20Ultrasound!5e0!3m2!1sen!2sus!4v1694470802573!5m2!1sen!2sus"
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Google Map Location 1"
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
+            
+            {/* Second Location */}
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <h3 className="text-xl font-light text-center py-3 bg-white border-b border-gray-100">
+                {language === 'en' ? 'Location 2' : 'Ubicación 2'}
+              </h3>
+              <div className="aspect-[16/9] w-full">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.445956119289!2d-116.93829380232613!3d32.81000842094508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d959de8adba5b1%3A0x2369dd43f5031a9d!2sHi%20Baby%20Ultrasound%20El%20Cajon!5e0!3m2!1sen!2sus!4v1694471020517!5m2!1sen!2sus"
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Google Map Location 2"
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <p className="text-gray-600 text-sm">
+              {language === 'en' 
+                ? 'Click on the maps to get directions to our locations'
+                : 'Haga clic en los mapas para obtener indicaciones a nuestras ubicaciones'}
+            </p>
           </div>
         </div>
       </section>

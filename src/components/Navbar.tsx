@@ -35,10 +35,15 @@ const Navbar = () => {
   };
   
   const toggleLanguage = () => {
-    setCurrentLanguage(currentLanguage === 'en' ? 'es' : 'en');
+    // Calculate new language once to ensure consistency
+    const newLanguage = currentLanguage === 'en' ? 'es' : 'en';
+    
+    // Update state
+    setCurrentLanguage(newLanguage);
+    
     // Dispatch a custom event that other components can listen to
     document.dispatchEvent(new CustomEvent('languageChange', { 
-      detail: { language: currentLanguage === 'en' ? 'es' : 'en' } 
+      detail: { language: newLanguage } 
     }));
   };
 

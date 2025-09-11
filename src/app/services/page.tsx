@@ -228,6 +228,14 @@ export default function ServicesPage() {
                     <div className="inline-block px-4 py-2 rounded-xl bg-[#6642c8]/10 text-[#6642c8] font-semibold text-xl">
                       {`$${s.price}`}
                     </div>
+                    <div className="mt-3">
+                      <Link 
+                        href="/contact" 
+                        className="text-[#6642c8] font-semibold hover:text-[#5a38b3] transition-colors duration-300 underline text-lg"
+                      >
+                        {language === 'en' ? 'Book Now' : 'Reservar'}
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

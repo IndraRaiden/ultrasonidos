@@ -79,10 +79,10 @@ export default function Second() {
               >
                 {currentLanguage === 'en' 
                   ? <>
-                      High precision <span className="text-indigo-700 font-normal">ultrasound</span> technology
+                      Hi Baby Ultrasound – Your baby&apos;s first hello
                     </>
                   : <>
-                      Tecnología de <span className="text-indigo-700 font-normal">ultrasonido</span> de alta precisión
+                      Hola Bebé Ultrasonido – El primer hola de tu bebé
                     </>}
               </h2>
             </div>
@@ -92,8 +92,8 @@ export default function Second() {
                 className={`text-gray-600 leading-relaxed transform transition-all duration-700 delay-200 ease-out ${sectionVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
               >
                 {currentLanguage === 'en' 
-                  ? 'Innovative and exclusive solutions for the medical and industrial sectors. Our cutting-edge technology provides unmatched precision and reliability for your diagnostic needs.'
-                  : 'Soluciones innovadoras y exclusivas para el sector médico e industrial. Nuestra tecnología de vanguardia proporciona una precisión y fiabilidad inigualables para sus necesidades de diagnóstico.'}
+                  ? 'From the first heartbeat to the sweetest smiles, we make every visit unforgettable. Share the joy with your loved ones and take home memories that warm your heart.'
+                  : 'Desde el primer latido hasta las sonrisas más dulces, hacemos que cada visita sea inolvidable. Comparte la alegría con tus seres queridos y llévate a casa recuerdos que calientan el corazón.'}
               </p>
             </div>
             
@@ -117,7 +117,7 @@ export default function Second() {
                   className="inline-flex items-center justify-center px-8 py-3 text-gray-700 hover:text-indigo-700 transition-colors duration-300 ease-out"
                 >
                   <span className="border-b border-gray-400 hover:border-indigo-600">
-                    {currentLanguage === 'en' ? 'Booking' : 'Reservas'}
+                    {currentLanguage === 'en' ? 'Schedule Now' : 'Reservas'}
                   </span>
                 </Link>
               </div>

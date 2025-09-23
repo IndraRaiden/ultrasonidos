@@ -124,10 +124,10 @@ const Navbar = () => {
                 <span className="relative z-10 uppercase tracking-widest text-xs font-light">{currentLanguage === 'en' ? 'ES' : 'EN'}</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-[#8a63d2]/0 via-[#8a63d2]/30 to-[#8a63d2]/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
               </button>
-              <button className="btn-primary border border-[#8a63d2]/40 bg-transparent hover:bg-[#8a63d2]/10 text-[#6642c8] hover:text-[#3a3a3a] group relative overflow-hidden">
+              <Link href="/contact" className="btn-primary border border-[#8a63d2]/40 bg-transparent hover:bg-[#8a63d2]/10 text-[#6642c8] hover:text-[#3a3a3a] group relative overflow-hidden">
                 <span className="relative z-10 uppercase tracking-widest text-xs font-light">{currentLanguage === 'en' ? 'Book Appointment' : 'Reservar Cita'}</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-[#8a63d2]/0 via-[#8a63d2]/30 to-[#8a63d2]/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-              </button>
+              </Link>
             </div>
           </div>
           
@@ -200,9 +200,9 @@ const Navbar = () => {
                   </svg>
                 </Link>
               </div>
-              <button className="w-full py-3 border border-[#8a63d2]/40 text-[#6642c8] uppercase tracking-widest text-xs font-light hover:bg-[#8a63d2]/10 transition-colors duration-300">
+              <Link href="/contact" className="block w-full py-3 border border-[#8a63d2]/40 text-[#6642c8] uppercase tracking-widest text-xs font-light hover:bg-[#8a63d2]/10 transition-colors duration-300 text-center">
                 {currentLanguage === 'en' ? 'Book Appointment' : 'Reservar Cita'}
-              </button>
+              </Link>
             </div>
           </div>
         </div>

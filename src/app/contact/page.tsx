@@ -177,6 +177,110 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Contact Form Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-light tracking-wide text-[#3a3a3a] mb-6">
+              {language === 'en' ? 'Send Us a Message' : 'Envíenos un Mensaje'}
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
+              {language === 'en' 
+                ? 'Have questions or want to schedule an appointment? Fill out the form below and we will get back to you as soon as possible.'
+                : '¿Tiene preguntas o desea programar una cita? Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible.'}
+            </p>
+          </div>
+          
+          <div className="bg-[#fafafa] rounded-lg p-8 shadow-sm">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    {language === 'en' ? 'Full Name' : 'Nombre Completo'} *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6642c8] focus:border-transparent transition-colors"
+                    placeholder={language === 'en' ? 'Your name' : 'Su nombre'}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    {language === 'en' ? 'Email Address' : 'Correo Electrónico'} *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6642c8] focus:border-transparent transition-colors"
+                    placeholder={language === 'en' ? 'Your email' : 'Su correo electrónico'}
+                  />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                    {language === 'en' ? 'Phone Number' : 'Número de Teléfono'}
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6642c8] focus:border-transparent transition-colors"
+                    placeholder={language === 'en' ? 'Your phone number' : 'Su número de teléfono'}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                    {language === 'en' ? 'Subject' : 'Asunto'} *
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6642c8] focus:border-transparent transition-colors"
+                    placeholder={language === 'en' ? 'Subject of your message' : 'Asunto de su mensaje'}
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  {language === 'en' ? 'Message' : 'Mensaje'} *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6642c8] focus:border-transparent transition-colors resize-none"
+                  placeholder={language === 'en' ? 'Your message' : 'Su mensaje'}
+                ></textarea>
+              </div>
+              
+              
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="px-8 py-3 bg-[#6642c8] text-white rounded-full hover:bg-[#8a63d2] transition-colors shadow-sm inline-flex items-center gap-2"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                  </svg>
+                  <span>{language === 'en' ? 'Send Message' : 'Enviar Mensaje'}</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
       {/* Map Section */}
       <section className="py-16 bg-[#f5f5f5]">
         <div className="container-custom">

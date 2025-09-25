@@ -43,7 +43,7 @@ export default function Third() {
             <div className="aspect-[4/3] relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-30"></div>
               <Image
-                src="/ultrasounds/Ultrasoundv1.webp"
+                src="/indexmain/700.jpg"
                 alt="Ultrasound Diagnostics"
                 fill
                 className="object-cover"
@@ -103,7 +103,7 @@ export default function Third() {
             <div className="aspect-[4/3] relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-30"></div>
               <Image
-                src="/ultrasounds/Ultrasoundv3.jpg"
+                src="/indexmain/800.jpg"
                 alt="Premium Maintenance"
                 fill
                 className="object-cover"

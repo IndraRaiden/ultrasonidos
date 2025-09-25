@@ -137,7 +137,7 @@ export default function Second() {
                   {/* Image */}
                   <div className="absolute inset-0 transform group-hover:scale-105 transition-transform duration-700 ease-out">
                     <Image 
-                      src="/mainindex/ultrasound.jpg" 
+                      src="/indexmain/900.jpg" 
                       alt="Ultrasound Technology" 
                       fill
                       className="object-cover"

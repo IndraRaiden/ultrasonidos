@@ -86,8 +86,8 @@ export default function Third() {
               </h3>
               <p className="text-gray-600 mb-6 text-sm font-light">
                 {currentLanguage === 'en' 
-                  ? "Shower your special moment with joy using our festive confetti cannons, available in pink, blue, or mixed colors for your gender reveal party."
-                  : "Llene su momento especial de alegría con nuestros festivos cañones de confeti, disponibles en colores rosa, azul o mixtos para su fiesta de revelación de género."}
+                  ? "Shower your special moment with joy using our festive confetti cannons, available in pink or blue for your gender reveal party."
+                  : "Llene su momento especial de alegría con nuestros festivos cañones de confeti, disponibles en colores rosa o azul para su fiesta de revelación de género."}
               </p>
               <Link href="/services/confetti-cannon" className="btn-link" style={{ display: 'flex', alignItems: 'center', position: 'absolute', bottom: '1.5rem', left: '1.5rem' }}>
                 <span className="text-xs uppercase tracking-widest">{currentLanguage === 'en' ? '✨ Discover' : '✨ Descubrir'}</span>

@@ -107,11 +107,23 @@ const Navbar = () => {
               <Link 
                 href="sms:+16195192997" 
                 className="btn-icon border border-[#8a63d2]/40 bg-transparent hover:bg-[#6642c8]/10 text-[#6642c8] hover:text-[#3a3a3a] group relative overflow-hidden p-2 rounded-full flex items-center justify-center"
-                aria-label="Contact via SMS"
+                aria-label="Contact via Email"
               >
                 <span className="relative z-10">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 512 512" fill="currentColor">
-                    <path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7 1.3 3 4.1 4.8 7.3 4.8 66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32zM128.2 304H116c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h12.3c6 0 10.4-3.5 10.4-6.6 0-1.3-.8-2.7-2.1-3.8-2.2-1.9-5.2-3.2-7.9-4.5-8.8-4.1-21.9-10.3-21.9-26.4 0-18.4 16.8-28.5 30-28.5h12c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8h-12.3c-6.9 0-10.4 3.5-10.4 6.6 0 2.1 3.3 4.2 6.8 5.9l.1.1c7.8 3.6 20.7 9.6 20.7 25.4 0 19.6-16.8 29.7-30.7 29.7zM368 304h-11.8v-48.1l-52.8 48.1H288c-4.4 0-8-3.6-8-8v-80c0-4.4 3.6-8 8-8h16c4.4 0 8 3.6 8 8v47.4l53.4-47.4H384c4.4 0 8 3.6 8 8v80c0 4.4-3.6 8-8 8zm-96-80h-32c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z" />
+                  <svg className="h-5 w-5" viewBox="0 0 512 512" fill="currentColor">
+                    <circle cx="256" cy="256" r="256" style={{fill: "#420060"}} />
+                    <g>
+                      <path style={{fill: "#FFFFFF"}} d="M384.64,346.48H127.36c-12.88,0-23.36-10.56-23.36-23.36V159.36c0-12.88,10.56-23.36,23.36-23.36   h257.2c12.88,0,23.36,10.56,23.36,23.36v163.68C408,335.92,397.44,346.48,384.64,346.48z" />
+                      <polygon style={{fill: "#FFFFFF"}} points="337.84,416.64 337.84,323.04 220.96,323.04" />
+                    </g>
+                    <rect x="244.32" y="206.16" width="23.36" height="23.36" />
+                    <rect x="197.52" y="206.16" width="23.36" height="23.36" />
+                    <rect x="150.8" y="206.16" width="23.36" height="23.36" />
+                    <rect x="291.04" y="206.16" width="23.36" height="23.36" />
+                    <rect x="337.84" y="206.16" width="23.36" height="23.36" />
+                    <rect x="244.32" y="252.96" width="23.36" height="23.36" />
+                    <rect x="291.04" y="252.96" width="23.36" height="23.36" />
+                    <rect x="337.84" y="252.96" width="23.36" height="23.36" />
                   </svg>
                 </span>
                 <span className="absolute inset-0 bg-gradient-to-r from-[#8a63d2]/0 via-[#8a63d2]/30 to-[#8a63d2]/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
@@ -193,10 +205,22 @@ const Navbar = () => {
                 <Link 
                   href="sms:+16195192997" 
                   className="flex-1 py-3 border border-[#8a63d2]/40 text-[#6642c8] uppercase tracking-widest text-xs font-light hover:bg-[#8a63d2]/10 transition-colors duration-300 flex items-center justify-center"
-                  aria-label="SMS"
+                  aria-label="Text Message"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 512 512" fill="currentColor">
-                    <path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7 1.3 3 4.1 4.8 7.3 4.8 66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32zM128.2 304H116c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h12.3c6 0 10.4-3.5 10.4-6.6 0-1.3-.8-2.7-2.1-3.8-2.2-1.9-5.2-3.2-7.9-4.5-8.8-4.1-21.9-10.3-21.9-26.4 0-18.4 16.8-28.5 30-28.5h12c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8h-12.3c-6.9 0-10.4 3.5-10.4 6.6 0 2.1 3.3 4.2 6.8 5.9l.1.1c7.8 3.6 20.7 9.6 20.7 25.4 0 19.6-16.8 29.7-30.7 29.7zM368 304h-11.8v-48.1l-52.8 48.1H288c-4.4 0-8-3.6-8-8v-80c0-4.4 3.6-8 8-8h16c4.4 0 8 3.6 8 8v47.4l53.4-47.4H384c4.4 0 8 3.6 8 8v80c0 4.4-3.6 8-8 8zm-96-80h-32c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z" />
+                  <svg className="h-5 w-5" viewBox="0 0 512 512" fill="currentColor">
+                    <circle cx="256" cy="256" r="256" style={{fill: "#420060"}} />
+                    <g>
+                      <path style={{fill: "#FFFFFF"}} d="M384.64,346.48H127.36c-12.88,0-23.36-10.56-23.36-23.36V159.36c0-12.88,10.56-23.36,23.36-23.36   h257.2c12.88,0,23.36,10.56,23.36,23.36v163.68C408,335.92,397.44,346.48,384.64,346.48z" />
+                      <polygon style={{fill: "#FFFFFF"}} points="337.84,416.64 337.84,323.04 220.96,323.04" />
+                    </g>
+                    <rect x="244.32" y="206.16" width="23.36" height="23.36" />
+                    <rect x="197.52" y="206.16" width="23.36" height="23.36" />
+                    <rect x="150.8" y="206.16" width="23.36" height="23.36" />
+                    <rect x="291.04" y="206.16" width="23.36" height="23.36" />
+                    <rect x="337.84" y="206.16" width="23.36" height="23.36" />
+                    <rect x="244.32" y="252.96" width="23.36" height="23.36" />
+                    <rect x="291.04" y="252.96" width="23.36" height="23.36" />
+                    <rect x="337.84" y="252.96" width="23.36" height="23.36" />
                   </svg>
                 </Link>
               </div>

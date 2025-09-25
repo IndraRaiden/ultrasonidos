@@ -104,7 +104,7 @@ export default function ContactPage() {
                       {language === 'en' ? 'Phone' : 'Teléfono'}
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      +1 (619) 519-2997
+                      +1 619-292-3600
                     </p>
                   </div>
                 </div>
@@ -169,6 +169,21 @@ export default function ContactPage() {
                   </svg>
                   <span className="text-sm">
                     {language === 'en' ? 'Follow us on Instagram' : 'Síguenos en Instagram'}
+                  </span>
+                </a>
+
+                <a
+                  href="https://www.tiktok.com/@hibabyultrasounds"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#6642c8] text-white hover:bg-[#8a63d2] transition-colors shadow-sm"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+                  </svg>
+                  <span className="text-sm">
+                    {language === 'en' ? 'Follow us on TikTok' : 'Síguenos en TikTok'}
                   </span>
                 </a>
               </div>

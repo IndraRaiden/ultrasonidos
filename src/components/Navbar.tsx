@@ -80,9 +80,9 @@ const Navbar = () => {
                 {currentLanguage === 'en' ? 'Gallery' : 'Galería'}
                 <span className={`absolute bottom-0 left-1/2 ${pathname === '/gallery' ? 'w-1/2 left-1/4' : 'w-0'} h-px bg-[#8a63d2] group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300`}></span>
               </Link>
-              <Link href="/about" className={`px-4 py-2 ${pathname === '/about' ? 'text-[#3a3a3a]' : 'text-gray-600'} hover:text-[#3a3a3a] uppercase tracking-widest text-xs font-light transition-colors duration-500 relative group`}>
-                {currentLanguage === 'en' ? 'About Us' : 'Nosotros'}
-                <span className={`absolute bottom-0 left-1/2 ${pathname === '/about' ? 'w-1/2 left-1/4' : 'w-0'} h-px bg-[#8a63d2] group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300`}></span>
+              <Link href="/faqs" className={`px-4 py-2 ${pathname === '/faqs' ? 'text-[#3a3a3a]' : 'text-gray-600'} hover:text-[#3a3a3a] uppercase tracking-widest text-xs font-light transition-colors duration-500 relative group`}>
+                {currentLanguage === 'en' ? 'FAQS' : 'FAQS'}
+                <span className={`absolute bottom-0 left-1/2 ${pathname === '/faqs' ? 'w-1/2 left-1/4' : 'w-0'} h-px bg-[#8a63d2] group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300`}></span>
               </Link>
               <Link href="/contact" className={`px-4 py-2 ${pathname === '/contact' ? 'text-[#3a3a3a]' : 'text-gray-600'} hover:text-[#3a3a3a] uppercase tracking-widest text-xs font-light transition-colors duration-500 relative group`}>
                 {currentLanguage === 'en' ? 'Contact' : 'Contacto'}
@@ -165,8 +165,8 @@ const Navbar = () => {
             <Link href="/gallery" className={`block px-4 py-3 ${pathname === '/gallery' ? 'text-[#3a3a3a] border-[#8a63d2]/40' : 'text-gray-500 hover:text-[#3a3a3a] border-transparent hover:border-[#8a63d2]/40'} font-light uppercase tracking-widest text-xs border-l transition-colors duration-300`}>
               {currentLanguage === 'en' ? 'Gallery' : 'Galería'}
             </Link>
-            <Link href="/about" className={`block px-4 py-3 ${pathname === '/about' ? 'text-[#3a3a3a] border-[#8a63d2]/40' : 'text-gray-500 hover:text-[#3a3a3a] border-transparent hover:border-[#8a63d2]/40'} font-light uppercase tracking-widest text-xs border-l transition-colors duration-300`}>
-              {currentLanguage === 'en' ? 'About Us' : 'Nosotros'}
+            <Link href="/faqs" className={`block px-4 py-3 ${pathname === '/faqs' ? 'text-[#3a3a3a] border-[#8a63d2]/40' : 'text-gray-500 hover:text-[#3a3a3a] border-transparent hover:border-[#8a63d2]/40'} font-light uppercase tracking-widest text-xs border-l transition-colors duration-300`}>
+              {currentLanguage === 'en' ? 'FAQS' : 'FAQS'}
             </Link>
             <Link href="/contact" className={`block px-4 py-3 ${pathname === '/contact' ? 'text-[#3a3a3a] border-[#8a63d2]/40' : 'text-gray-500 hover:text-[#3a3a3a] border-transparent hover:border-[#8a63d2]/40'} font-light uppercase tracking-widest text-xs border-l transition-colors duration-300`}>
               {currentLanguage === 'en' ? 'Contact' : 'Contacto'}

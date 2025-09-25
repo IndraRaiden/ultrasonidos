@@ -46,8 +46,8 @@ export default function Footer() {
             <Link href="/services" className="text-xs uppercase tracking-widest text-gray-400 hover:text-[#8a63d2] transition-colors duration-300">
               {currentLanguage === 'en' ? 'Services' : 'Servicios'}
             </Link>
-            <Link href="/about" className="text-xs uppercase tracking-widest text-gray-400 hover:text-[#8a63d2] transition-colors duration-300">
-              {currentLanguage === 'en' ? 'About Us' : 'Nosotros'}
+            <Link href="/faqs" className="text-xs uppercase tracking-widest text-gray-400 hover:text-[#8a63d2] transition-colors duration-300">
+              {currentLanguage === 'en' ? 'FAQS' : 'FAQS'}
             </Link>
             <Link href="/contact" className="text-xs uppercase tracking-widest text-gray-400 hover:text-[#8a63d2] transition-colors duration-300">
               {currentLanguage === 'en' ? 'Contact' : 'Contacto'}

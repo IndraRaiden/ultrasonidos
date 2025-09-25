@@ -452,44 +452,69 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* YouTube Short Section */}
-      <section className="py-16 bg-[#fafafa]">
+
+      {/* Locations Section */}
+      <section className="py-16 bg-white">
         <div className="container-custom">
-          <div className="text-center mb-8">
+          <div className="text-center mb-12">
             <h2 className="text-3xl font-light tracking-wide text-[#3a3a3a] mb-6">
-              {language === 'en' ? 'Watch our experiences' : 'Mira nuestras experiencias'}
+              {language === 'en' ? 'Our Locations' : 'Nuestras Ubicaciones'}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* First Video */}
-              <div className="aspect-[9/16] relative">
-                <iframe 
-                  className="w-full h-full absolute inset-0"
-                  src="https://www.youtube.com/embed/5H8KnP08iDY?autoplay=1&mute=1&loop=1&playlist=5H8KnP08iDY"
-                  title="YouTube Short - Ultrasound Experience 1"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              
-              {/* Second Video */}
-              <div className="aspect-[9/16] relative">
-                <iframe 
-                  className="w-full h-full absolute inset-0"
-                  src="https://www.youtube.com/embed/iiS_xVRP52Y?autoplay=1&mute=1&loop=1&playlist=iiS_xVRP52Y"
-                  title="YouTube Short - Ultrasound Experience 2"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
+            <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed mb-8">
+              {language === 'en' 
+                ? 'Visit us at any of our convenient locations.'
+                : 'Visítenos en cualquiera de nuestras ubicaciones convenientes.'}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* National City Location */}
+            <div className="bg-[#fafafa] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a]">
+                {language === 'en' ? 'National City' : 'National City'}
+              </h3>
+              <p className="text-gray-600 font-light leading-relaxed mb-4">
+                1615 E Plaza Blvd #102, National City, CA 91950, United States
+              </p>
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=1615+E+Plaza+Blvd+%23102%2C+National+City%2C+CA+91950%2C+United+States"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#6642c8] hover:text-[#8a63d2] transition-colors"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <span>{language === 'en' ? 'View on Map' : 'Ver en el Mapa'}</span>
+              </a>
+            </div>
+            
+            {/* El Cajon Location */}
+            <div className="bg-[#fafafa] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a]">
+                {language === 'en' ? 'El Cajon' : 'El Cajon'}
+              </h3>
+              <p className="text-gray-600 font-light leading-relaxed mb-4">
+                1122 N 2nd St, El Cajon, CA 92021, United States
+              </p>
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=1122+N+2nd+St%2C+El+Cajon%2C+CA+92021%2C+United+States"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#6642c8] hover:text-[#8a63d2] transition-colors"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <span>{language === 'en' ? 'View on Map' : 'Ver en el Mapa'}</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Hours Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#f5f5f5]">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-light tracking-wide text-[#3a3a3a] mb-6">

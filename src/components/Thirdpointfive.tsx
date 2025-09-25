@@ -113,6 +113,61 @@ export default function Thirdpointfive() {
             </div>
           ))}
         </div>
+        
+        {/* YouTube Short Section */}
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <span className="text-xs uppercase tracking-[0.2em] text-purple-600 mb-2 block">
+              {currentLanguage === 'en' ? 'Real Moments' : 'Momentos Reales'}
+            </span>
+            <h2 className="text-3xl font-medium tracking-wide text-gray-900 mb-4 relative inline-block">
+              {currentLanguage === 'en' ? '✨ Watch Our Magical Experiences ✨' : '✨ Mira Nuestras Experiencias Mágicas ✨'}
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-purple-300 via-purple-500 to-purple-300 rounded-full"></span>
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed mb-8">
+              {currentLanguage === 'en' 
+                ? 'See the joy and emotion of real families during their ultrasound sessions with us.'
+                : 'Observa la alegría y emoción de familias reales durante sus sesiones de ultrasonido con nosotros.'}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* First Video */}
+              <div className="aspect-[9/16] relative">
+                <iframe 
+                  className="w-full h-full absolute inset-0"
+                  src="https://www.youtube.com/embed/5H8KnP08iDY?autoplay=1&mute=1&loop=1&playlist=5H8KnP08iDY"
+                  title="YouTube Short - Ultrasound Experience 1"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              
+              {/* Second Video */}
+              <div className="aspect-[9/16] relative">
+                <iframe 
+                  className="w-full h-full absolute inset-0"
+                  src="https://www.youtube.com/embed/iiS_xVRP52Y?autoplay=1&mute=1&loop=1&playlist=iiS_xVRP52Y"
+                  title="YouTube Short - Ultrasound Experience 2"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              
+              {/* Third Video */}
+              <div className="aspect-[9/16] relative">
+                <iframe 
+                  className="w-full h-full absolute inset-0"
+                  src="https://www.youtube.com/embed/hcfd3Ui0r9Q?autoplay=1&mute=1&loop=1&playlist=hcfd3Ui0r9Q"
+                  title="YouTube Short - Ultrasound Experience 3"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

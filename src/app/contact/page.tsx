@@ -83,9 +83,12 @@ export default function ContactPage() {
                       {language === 'en' ? 'Address' : 'Dirección'}
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Av. Principal #123<br />
-                      Colonia Centro<br />
-                      Ciudad de México, CP 12345
+                      <strong>National City:</strong><br />
+                      1615 E Plaza Blvd #102<br />
+                      National City, CA 91950<br /><br />
+                      <strong>El Cajon:</strong><br />
+                      1122 N 2nd St<br />
+                      El Cajon, CA 92021
                     </p>
                   </div>
                 </div>
@@ -196,7 +199,7 @@ export default function ContactPage() {
               </h3>
               <div className="aspect-[16/9] w-full">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.892787364381!2d-117.09117450232068!3d32.67448497103006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d953ff246b6c63%3A0xc00e6ab8e7de32e4!2sHi%20Baby%20Ultrasound!5e0!3m2!1sen!2sus!4v1694470802573!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992!2d-117.088472!3d32.6769523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d953ff246b6c63%3A0xc00e6ab8e7de32e4!2sHi%20Baby%20Ultrasound!5e0!3m2!1sen!2smx!4v1695604136!5m2!1sen!2smx"
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
@@ -216,7 +219,7 @@ export default function ContactPage() {
               </h3>
               <div className="aspect-[16/9] w-full">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.445956119289!2d-116.93829380232613!3d32.81000842094508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d959de8adba5b1%3A0x2369dd43f5031a9d!2sHi%20Baby%20Ultrasound%20El%20Cajon!5e0!3m2!1sen!2sus!4v1694471020517!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991!2d-116.9360068!3d32.8100674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d959de8adba5b1%3A0x2369dd43f5031a9d!2sHi%20Baby%20Ultrasound%20El%20Cajon!5e0!3m2!1sen!2smx!4v1695604136!5m2!1sen!2smx"
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
@@ -240,74 +243,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#6642c8]/80 mb-4 block">
-              {language === 'en' ? 'Frequently Asked Questions' : 'Preguntas Frecuentes'}
-            </span>
-            <h2 className="text-3xl font-light tracking-wide text-[#3a3a3a] mb-6">
-              {language === 'en' ? 'How Can We Help You?' : '¿Cómo Podemos Ayudarle?'}
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
-              {language === 'en'
-                ? 'Find answers to the most common questions about our services and processes.'
-                : 'Encuentre respuestas a las preguntas más comunes sobre nuestros servicios y procesos.'}
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div>
-              <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
-                <span className="w-8 h-8 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#6642c8]">1</span>
-                {language === 'en' ? 'How can I schedule an appointment?' : '¿Cómo puedo programar una cita?'}
-              </h3>
-              <p className="text-gray-600 font-light leading-relaxed pl-11">
-                {language === 'en'
-                  ? 'You can schedule an appointment by calling our phone number, sending an email, or using the contact form on this page. Our team will contact you to confirm the date and time.'
-                  : 'Puede programar una cita llamando a nuestro número de teléfono, enviando un correo electrónico o utilizando el formulario de contacto en esta página. Nuestro equipo se pondrá en contacto con usted para confirmar la fecha y hora.'}
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
-                <span className="w-8 h-8 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#6642c8]">2</span>
-                {language === 'en' ? 'What should I bring to my appointment?' : '¿Qué debo llevar a mi cita?'}
-              </h3>
-              <p className="text-gray-600 font-light leading-relaxed pl-11">
-                {language === 'en'
-                  ? 'It is advisable to bring your ID, health insurance card (if applicable), and any relevant medical documentation or previous studies related to your consultation.'
-                  : 'Es recomendable traer su identificación, tarjeta de seguro médico (si aplica), y cualquier documentación médica relevante o estudios previos relacionados con su consulta.'}
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
-                <span className="w-8 h-8 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#6642c8]">3</span>
-                {language === 'en' ? 'How long does an ultrasound study take?' : '¿Cuánto tiempo toma un estudio de ultrasonido?'}
-              </h3>
-              <p className="text-gray-600 font-light leading-relaxed pl-11">
-                {language === 'en'
-                  ? 'The duration varies depending on the type of study, but generally takes between 15 and 45 minutes. More complex studies may require more time. We will inform you about the estimated duration when scheduling your appointment.'
-                  : 'La duración varía según el tipo de estudio, pero generalmente toma entre 15 y 45 minutos. Estudios más complejos pueden requerir más tiempo. Le informaremos sobre la duración estimada al programar su cita.'}
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
-                <span className="w-8 h-8 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#6642c8]">4</span>
-                {language === 'en' ? 'When will I receive my results?' : '¿Cuándo recibiré mis resultados?'}
-              </h3>
-              <p className="text-gray-600 font-light leading-relaxed pl-11">
-                {language === 'en'
-                  ? 'Results are usually available immediately after the procedure. In cases that require more detailed analysis, results will be ready within 24 to 48 hours.'
-                  : 'Los resultados suelen estar disponibles inmediatamente después del procedimiento. En casos que requieran un análisis más detallado, los resultados estarán listos en un plazo de 24 a 48 horas.'}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

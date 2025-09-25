@@ -91,7 +91,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center space-x-3">
               <Link 
-                href="https://wa.me/+16192923600" 
+                href="https://wa.me/+16195192997" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-icon border border-[#8a63d2]/40 bg-transparent hover:bg-[#25D366]/10 text-[#25D366] hover:text-[#25D366] group relative overflow-hidden p-2 rounded-full flex items-center justify-center"
@@ -105,7 +105,7 @@ const Navbar = () => {
                 <span className="absolute inset-0 bg-gradient-to-r from-[#25D366]/0 via-[#25D366]/30 to-[#25D366]/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
               </Link>
               <Link 
-                href="sms:+16192923600" 
+                href="sms:+16195192997" 
                 className="btn-icon border border-[#8a63d2]/40 bg-transparent hover:bg-[#6642c8]/10 text-[#6642c8] hover:text-[#3a3a3a] group relative overflow-hidden p-2 rounded-full flex items-center justify-center"
                 aria-label="Contact via SMS"
               >
@@ -180,7 +180,7 @@ const Navbar = () => {
             <div className="pt-6 border-t border-[#8a63d2]/20">
               <div className="flex justify-center space-x-4 mb-4">
                 <Link 
-                  href="https://wa.me/+16192923600" 
+                  href="https://wa.me/+16195192997" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex-1 py-3 border border-[#8a63d2]/40 text-[#25D366] uppercase tracking-widest text-xs font-light hover:bg-[#25D366]/10 transition-colors duration-300 flex items-center justify-center space-x-2"
@@ -191,7 +191,7 @@ const Navbar = () => {
                   <span>{currentLanguage === 'en' ? 'WhatsApp' : 'WhatsApp'}</span>
                 </Link>
                 <Link 
-                  href="sms:+16192923600" 
+                  href="sms:+16195192997" 
                   className="flex-1 py-3 border border-[#8a63d2]/40 text-[#6642c8] uppercase tracking-widest text-xs font-light hover:bg-[#8a63d2]/10 transition-colors duration-300 flex items-center justify-center"
                   aria-label="SMS"
                 >

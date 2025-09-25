@@ -101,7 +101,7 @@ export default function ContactPage() {
                       {language === 'en' ? 'Phone' : 'Teléfono'}
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      +1 619-292-3600
+                      +1 (619) 519-2997
                     </p>
                   </div>
                 </div>

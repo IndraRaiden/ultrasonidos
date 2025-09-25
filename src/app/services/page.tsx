@@ -506,10 +506,10 @@ export default function ServicesPage() {
                 : 'Sábados-Domingos 10am Cierre flexible según citas programadas. Llame para reservar su lugar. ¡Reserve temprano, los espacios se llenan rápido!'}
             </p>
             <p className="text-[#6642c8] font-semibold mb-2">
-              {language === 'en' ? 'Hi Baby ultrasound Phone number' : 'Número de teléfono de Hi Baby ultrasound'}: (619)292-3600
+              {language === 'en' ? 'Hi Baby ultrasound Phone number' : 'Número de teléfono de Hi Baby ultrasound'}: +1 (619) 519-2997
             </p>
             <p className="text-[#6642c8] font-semibold mb-2">
-              {language === 'en' ? 'Book an appointment through text' : 'Reserve una cita por mensaje de texto'}: (619)519-2997
+              {language === 'en' ? 'Book an appointment through text' : 'Reserve una cita por mensaje de texto'}: +1 (619) 519-2997
             </p>
           </div>
         </div>

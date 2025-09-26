@@ -4,10 +4,19 @@
 import Footer from "../../components/Footer";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, FormEvent } from "react";
 
 export default function ContactPage() {
   const [language, setLanguage] = useState('en');
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
 
   useEffect(() => {
     // Listen for language change events from the Navbar
@@ -23,6 +32,42 @@ export default function ContactPage() {
       document.removeEventListener('languageChange', handleLanguageChange as EventListener);
     };
   }, []);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    try {
+      const response = await fetch('https://formspree.io/f/mwprveon', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        setSubmitted(true);
+        setError(null);
+      } else {
+        const data = await response.json();
+        throw new Error(data.error || 'Something went wrong');
+      }
+    } catch (err) {
+      setError(language === 'en' 
+        ? 'There was a problem sending your message. Please try again.'
+        : 'Hubo un problema al enviar su mensaje. Por favor, inténtelo de nuevo.');
+      console.error('Form submission error:', err);
+    }
+  };
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navbar is now in the layout file */}
@@ -207,7 +252,12 @@ export default function ContactPage() {
           </div>
           
           <div className="bg-[#fafafa] rounded-lg p-8 shadow-sm">
-            <form className="space-y-6">
+            <form 
+              className="space-y-6" 
+              action="https://formspree.io/f/mwprveon" 
+              method="POST"
+              onSubmit={handleSubmit}
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -220,6 +270,8 @@ export default function ContactPage() {
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6642c8] focus:border-transparent transition-colors"
                     placeholder={language === 'en' ? 'Your name' : 'Su nombre'}
+                    value={formData.name}
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div>
@@ -233,6 +285,8 @@ export default function ContactPage() {
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6642c8] focus:border-transparent transition-colors"
                     placeholder={language === 'en' ? 'Your email' : 'Su correo electrónico'}
+                    value={formData.email}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -248,6 +302,8 @@ export default function ContactPage() {
                     name="phone"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6642c8] focus:border-transparent transition-colors"
                     placeholder={language === 'en' ? 'Your phone number' : 'Su número de teléfono'}
+                    value={formData.phone}
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div>
@@ -261,6 +317,8 @@ export default function ContactPage() {
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6642c8] focus:border-transparent transition-colors"
                     placeholder={language === 'en' ? 'Subject of your message' : 'Asunto de su mensaje'}
+                    value={formData.subject}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -276,21 +334,62 @@ export default function ContactPage() {
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6642c8] focus:border-transparent transition-colors resize-none"
                   placeholder={language === 'en' ? 'Your message' : 'Su mensaje'}
+                  value={formData.message}
+                  onChange={handleInputChange}
                 ></textarea>
               </div>
               
               
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="px-8 py-3 bg-[#6642c8] text-white rounded-full hover:bg-[#8a63d2] transition-colors shadow-sm inline-flex items-center gap-2"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              {submitted ? (
+                <div className="text-center p-4 bg-green-50 rounded-lg border border-green-200">
+                  <svg className="w-6 h-6 text-green-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span>{language === 'en' ? 'Send Message' : 'Enviar Mensaje'}</span>
-                </button>
-              </div>
+                  <p className="text-green-700">
+                    {language === 'en' ? 'Thank you! Your message has been sent successfully.' : '¡Gracias! Su mensaje ha sido enviado con éxito.'}
+                  </p>
+                  <button 
+                    onClick={() => {
+                      setSubmitted(false);
+                      setFormData({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        subject: '',
+                        message: ''
+                      });
+                    }}
+                    className="mt-3 text-sm text-[#6642c8] hover:underline"
+                  >
+                    {language === 'en' ? 'Send another message' : 'Enviar otro mensaje'}
+                  </button>
+                </div>
+              ) : error ? (
+                <div className="text-center p-4 bg-red-50 rounded-lg border border-red-200">
+                  <svg className="w-6 h-6 text-red-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                  <p className="text-red-700">{error}</p>
+                  <button 
+                    onClick={() => setError(null)}
+                    className="mt-3 text-sm text-[#6642c8] hover:underline"
+                  >
+                    {language === 'en' ? 'Try again' : 'Intentar nuevamente'}
+                  </button>
+                </div>
+              ) : (
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    className="px-8 py-3 bg-[#6642c8] text-white rounded-full hover:bg-[#8a63d2] transition-colors shadow-sm inline-flex items-center gap-2"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                    <span>{language === 'en' ? 'Send Message' : 'Enviar Mensaje'}</span>
+                  </button>
+                </div>
+              )}
             </form>
           </div>
         </div>

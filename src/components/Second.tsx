@@ -61,7 +61,7 @@ export default function Second() {
       
       {/* Main content */}
       <div className="container mx-auto px-6 relative z-10 max-w-6xl">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         
           {/* Left content column */}
           <div className="lg:w-1/2 space-y-8">
@@ -79,7 +79,7 @@ export default function Second() {
               >
                 {currentLanguage === 'en' 
                   ? <>
-                      Hi Baby Ultrasound – Your baby&apos;s first hello
+                      From 2D to 4D Ultrasounds – Your Baby&apos;s First Hello
                     </>
                   : <>
                       Hola Bebé Ultrasonido – El primer hola de tu bebé
@@ -92,7 +92,7 @@ export default function Second() {
                 className={`text-gray-600 leading-relaxed transform transition-all duration-700 delay-200 ease-out ${sectionVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
               >
                 {currentLanguage === 'en' 
-                  ? 'From the first heartbeat to the sweetest smiles, we make every visit unforgettable. Share the joy with your loved ones and take home memories that warm your heart.'
+                  ? 'See every detail of your little one&apos;s journey — from the very first heartbeat to lifelike 4D smiles. At Hi Baby, we turn precious moments into lasting memories'
                   : 'Desde el primer latido hasta las sonrisas más dulces, hacemos que cada visita sea inolvidable. Comparte la alegría con tus seres queridos y llévate a casa recuerdos que calientan el corazón.'}
               </p>
             </div>
@@ -124,24 +124,25 @@ export default function Second() {
             </div>
           </div>
           
-          {/* Right image column */}
+          {/* Right video column */}
           <div className="lg:w-1/2">
             <div className="overflow-hidden">
               <div 
                 className={`relative transform transition-all duration-1000 delay-200 ease-out ${sectionVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-24 opacity-0 scale-95'}`}
               >
-                {/* Main image with parallax effect */}
-                <div className="relative w-full aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden group">
+                {/* Main video with enhanced size */}
+                <div className="relative w-[110%] aspect-video rounded-2xl overflow-hidden group shadow-xl transform -translate-x-[5%]">
                   <div className="absolute inset-0 bg-indigo-900/5 group-hover:bg-indigo-900/0 transition-colors duration-500 z-10"></div>
                   
-                  {/* Image */}
+                  {/* Video iframe */}
                   <div className="absolute inset-0 transform group-hover:scale-105 transition-transform duration-700 ease-out">
-                    <Image 
-                      src="/indexmain/900.jpg" 
-                      alt="Ultrasound Technology" 
-                      fill
-                      className="object-cover"
-                      priority
+                    <iframe 
+                      src="https://www.youtube.com/embed/PnXthsPg8jg?autoplay=1&mute=1&rel=0&showinfo=0&controls=1&modestbranding=1&playsinline=1&fs=1&hd=1" 
+                      title="HI BABY INTRO"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                      style={{border: 'none'}}
                     />
                   </div>
                   

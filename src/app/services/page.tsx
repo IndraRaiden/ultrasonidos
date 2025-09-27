@@ -74,19 +74,6 @@ export default function ServicesPage() {
       ],
     },
     {
-      id: 'see-baby-color',
-      title: 'See Baby in Color',
-      image: '/ultrasounds/R.jpeg',
-      price: 110,
-      features: [
-        '1 4x6 4D Color Print or 2 Prints $125',
-        '3 Black and white prints',
-        "Hear baby's heartbeat",
-        'Video & All pictures App Momitalk',
-        "Add on Baby's Heartbeat in a stuffed Animal $38",
-      ],
-    },
-    {
       id: 'see-baby-color-plus',
       title: 'See Baby in Color plus',
       image: '/ultrasounds/Ultrasoundv3.jpg',
@@ -133,39 +120,9 @@ export default function ServicesPage() {
       ],
     },
     {
-      id: 'gender-special',
-      title: 'Gender Special',
-      image: '/imagesrandom/3.jpg',
-      price: 55,
-      features: [
-        'Must be 14 weeks plus',
-        '2 Black and white prints',
-        'Every 1st & 30th of every month',
-        'National City Location Only',
-      ],
-    },
-    {
-      id: 'dna-standard',
-      title: 'DNA Early Gender Test 6 weeks+',
-      image: '/imagesrandom/1.jpg',
-      price: 139,
-      features: [
-        'Standard (results in 2 days)',
-      ],
-    },
-    {
-      id: 'dna-fast',
-      title: 'DNA Early Gender Test 6 weeks+',
-      image: '/imagesrandom/2.jpg',
-      price: 155,
-      features: [
-        'Fast Track (results next day)',
-      ],
-    },
-    {
       id: 'stuffed-animal',
       title: 'Stuffed Animal with Baby\'s Heartbeat',
-      image: '/imagesrandom/5.jpg',
+      image: '/DSC09265.jpg',
       price: 50,
       features: [
         'No ultrasound scan',
@@ -249,19 +206,6 @@ export default function ServicesPage() {
       ],
     },
     {
-      id: 'see-baby-color',
-      title: 'Ver al Bebé a Color',
-      image: '/ultrasounds/R.jpeg',
-      price: 110,
-      features: [
-        '1 impresión 4x6 4D a color o 2 impresiones $125',
-        '3 impresiones en blanco y negro',
-        'Escucha el latido del bebé',
-        'Video y todas las fotos App Momitalk',
-        'Agrega el latido del bebé en un peluche $38',
-      ],
-    },
-    {
       id: 'see-baby-color-plus',
       title: 'Ver al Bebé a Color Plus',
       image: '/ultrasounds/Ultrasoundv3.jpg',
@@ -308,39 +252,9 @@ export default function ServicesPage() {
       ],
     },
     {
-      id: 'gender-special',
-      title: 'Especial de Género',
-      image: '/imagesrandom/3.jpg',
-      price: 55,
-      features: [
-        'Debe tener 14 semanas o más',
-        '2 impresiones en blanco y negro',
-        'Cada 1 y 30 de cada mes',
-        'Solo ubicación de National City',
-      ],
-    },
-    {
-      id: 'dna-standard',
-      title: 'Prueba de ADN para género temprano 6 semanas+',
-      image: '/imagesrandom/1.jpg',
-      price: 139,
-      features: [
-        'Estándar (resultados en 2 días)',
-      ],
-    },
-    {
-      id: 'dna-fast',
-      title: 'Prueba de ADN para género temprano 6 semanas+',
-      image: '/imagesrandom/2.jpg',
-      price: 155,
-      features: [
-        'Vía rápida (resultados al día siguiente)',
-      ],
-    },
-    {
       id: 'stuffed-animal',
       title: 'Peluche con el latido del bebé',
-      image: '/imagesrandom/5.jpg',
+      image: '/DSC09265.jpg',
       price: 50,
       features: [
         'Sin escaneo de ultrasonido',
@@ -433,15 +347,13 @@ export default function ServicesPage() {
                     </li>
                   </ul>
                   <div className="mt-auto">
-                    <div className="inline-block px-4 py-2 rounded-xl bg-[#6642c8]/10 text-[#6642c8] font-semibold text-xl">
-                      {`$${s.price}`}
-                    </div>
+                    {/* Purple frame removed as requested */}
                     <div className="mt-3">
                       <Link 
                         href="/contact" 
                         className="text-[#6642c8] font-semibold hover:text-[#5a38b3] transition-colors duration-300 underline text-lg"
                       >
-                        {language === 'en' ? 'Book Now' : 'Reservar'}
+                        {/* Removed text as requested */}
                       </Link>
                     </div>
                   </div>

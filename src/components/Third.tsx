@@ -26,7 +26,7 @@ export default function Third() {
       <div className="container-custom">
         <div className="text-center mb-16">
           <span className="text-xs uppercase tracking-[0.2em] text-white mb-4 block">
-            {currentLanguage === 'en' ? 'Gender Reveal Products' : 'Productos para Revelación de Género'}
+            {currentLanguage === 'en' ? '' : 'Productos para Revelación de Género'}
           </span>
           <h2 className="section-heading centered text-3xl !text-white">
             {currentLanguage === 'en' ? 'Our Products' : 'Nuestros Productos'}
@@ -43,7 +43,7 @@ export default function Third() {
             <div className="aspect-[4/3] relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-30"></div>
               <Image
-                src="/indexmain/700.jpg"
+                src="/fotos/1.jpg"
                 alt="Ultrasound Diagnostics"
                 fill
                 className="object-cover"
@@ -59,7 +59,7 @@ export default function Third() {
                   ? "Create a colorful explosion of joy with our premium powder cannons, perfect for capturing that special moment in photos and videos."
                   : "Cree una explosión colorida de alegría con nuestros cañones de polvo premium, perfectos para capturar ese momento especial en fotos y videos."}
               </p>
-              <Link href="/services/powder-cannon" className="btn-link" style={{ display: 'flex', alignItems: 'center', position: 'absolute', bottom: '1.5rem', left: '1.5rem' }}>
+              <Link href="/services" className="btn-link" style={{ display: 'flex', alignItems: 'center', position: 'absolute', bottom: '1.5rem', left: '1.5rem' }}>
                 <span className="text-xs uppercase tracking-widest">{currentLanguage === 'en' ? '✨ Discover' : '✨ Descubrir'}</span>
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -73,7 +73,7 @@ export default function Third() {
             <div className="aspect-[4/3] relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-30"></div>
               <Image
-                src="/ultrasounds/Ultrasoundv2.webp"
+                src="/fotos/2.jpg"
                 alt="Industrial Consulting"
                 fill
                 className="object-cover"
@@ -89,7 +89,7 @@ export default function Third() {
                   ? "Shower your special moment with joy using our festive confetti cannons, available in pink or blue for your gender reveal party."
                   : "Llene su momento especial de alegría con nuestros festivos cañones de confeti, disponibles en colores rosa o azul para su fiesta de revelación de género."}
               </p>
-              <Link href="/services/confetti-cannon" className="btn-link" style={{ display: 'flex', alignItems: 'center', position: 'absolute', bottom: '1.5rem', left: '1.5rem' }}>
+              <Link href="/services" className="btn-link" style={{ display: 'flex', alignItems: 'center', position: 'absolute', bottom: '1.5rem', left: '1.5rem' }}>
                 <span className="text-xs uppercase tracking-widest">{currentLanguage === 'en' ? '✨ Discover' : '✨ Descubrir'}</span>
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -119,7 +119,7 @@ export default function Third() {
                   ? "Adorable plush animals with a special recording of your baby's heartbeat inside, creating a cherished keepsake that will last a lifetime."
                   : "Adorables animales de peluche con una grabación especial del latido del corazón de su bebé en el interior, creando un recuerdo preciado que durará toda la vida."}
               </p>
-              <Link href="/services/stuffed-animals" className="btn-link" style={{ display: 'flex', alignItems: 'center', position: 'absolute', bottom: '1.5rem', left: '1.5rem' }}>
+              <Link href="/services" className="btn-link" style={{ display: 'flex', alignItems: 'center', position: 'absolute', bottom: '1.5rem', left: '1.5rem' }}>
                 <span className="text-xs uppercase tracking-widest">{currentLanguage === 'en' ? '✨ Discover' : '✨ Descubrir'}</span>
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>

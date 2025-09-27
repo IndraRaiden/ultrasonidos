@@ -30,7 +30,7 @@ export default function Fourth() {
               <div className="w-full aspect-[4/5] relative overflow-hidden bg-[#f5f5f5]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-30"></div>
                 <Image 
-                  src="/About-min.png" 
+                  src="/fotos/nancysbg.jpg" 
                   alt="Nuestra empresa" 
                   fill
                   className="object-cover"
@@ -50,7 +50,7 @@ export default function Fourth() {
                 ? 'We are an exclusive firm specialized in high-precision ultrasound technology, dedicated to providing innovative and sophisticated solutions for the most demanding medical and industrial sectors.'
                 : 'Somos una firma exclusiva especializada en tecnología de ultrasonido de alta precisión, dedicada a proporcionar soluciones innovadoras y sofisticadas para el sector médico e industrial más exigente.'}
             </p>
-            <p className="text-gray-300 mb-10 font-light leading-relaxed">
+            <p className="text-gray-600 mb-10 font-light leading-relaxed">
               {currentLanguage === 'en' 
                 ? 'With a trajectory of excellence, our select team of experts is committed to providing impeccable and personalized service that exceeds the expectations of our distinguished clientele.'
                 : 'Con una trayectoria de excelencia, nuestro selecto equipo de expertos está comprometido con ofrecer un servicio impecable y personalizado que supera las expectativas de nuestra distinguida clientela.'}

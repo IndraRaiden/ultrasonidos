@@ -27,7 +27,7 @@ export default function ServicesPage() {
     {
       id: 'quick-peek',
       title: 'Hi Baby Quick Peek',
-      image: '/ultrasounds/Ultrasoundv1.webp',
+      image: '/imgservices/A.jpg',
       price: 54,
       features: [
         '6+ weeks',
@@ -46,7 +46,7 @@ export default function ServicesPage() {
     {
       id: 'gender-determination',
       title: 'Gender Determination',
-      image: '/mainindex/ultrasound.jpg',
+      image: '/imgservices/B.jpg',
       price: 70,
       features: [
         '14+ weeks',
@@ -76,7 +76,7 @@ export default function ServicesPage() {
     {
       id: 'see-baby-color-plus',
       title: 'See Baby in Color plus',
-      image: '/ultrasounds/Ultrasoundv3.jpg',
+      image: '/imgservices/E.jpg',
       price: 155,
       features: [
         '1 5x7 color print',
@@ -89,7 +89,7 @@ export default function ServicesPage() {
     {
       id: 'multiple-visits',
       title: 'Hi Baby Multiple Visits! 7 Visits',
-      image: '/imagesrandom/4.jpg',
+      image: '/imgservices/F.jpg',
       price: 460,
       features: [
         '1 4x6 color print & Black/whites each visit',
@@ -102,7 +102,7 @@ export default function ServicesPage() {
     {
       id: 'gender-check',
       title: 'Gender Check',
-      image: '/ultrasounds/DSC09280.png',
+      image: '/imgservices/g.jpg',
       price: 50,
       features: [
         'Must be 14 weeks plus',
@@ -111,7 +111,7 @@ export default function ServicesPage() {
     {
       id: 'color-session',
       title: 'Color Session 4D/5HD',
-      image: '/imagesrandom/6.jpg',
+      image: '/imgservices/H.jpg',
       price: 85,
       features: [
         'Video & All pictures App Momitalk',
@@ -122,7 +122,7 @@ export default function ServicesPage() {
     {
       id: 'stuffed-animal',
       title: 'Stuffed Animal with Baby\'s Heartbeat',
-      image: '/DSC09265.jpg',
+      image: '/imgservices/i.jpg',
       price: 50,
       features: [
         'No ultrasound scan',
@@ -132,7 +132,7 @@ export default function ServicesPage() {
     {
       id: 'gender-reveal',
       title: 'GENDER REVEAL',
-      image: '/imagesrandom/7.jpg',
+      image: '/imgservices/j.jpg',
       price: 45,
       features: [
         'Pop your confetti cannons inside our ultrasound room',
@@ -142,14 +142,14 @@ export default function ServicesPage() {
     {
       id: 'confetti-cannons',
       title: 'Confetti Cannons',
-      image: '/imagesrandom/8.jpg',
+      image: '/imgservices/k.jpg',
       price: 12,
       features: [],
     },
     {
       id: 'powder-cannons',
       title: 'Powder Cannons',
-      image: '/imagesrandom/9.jpg',
+      image: '/imgservices/l.jpg',
       price: 13,
       features: [],
     },
@@ -159,7 +159,7 @@ export default function ServicesPage() {
     {
       id: 'quick-peek',
       title: 'Hi Baby Quick Peek',
-      image: '/ultrasounds/Ultrasoundv1.webp',
+      image: '/imgservices/A.jpg',
       price: 54,
       features: [
         '6+ semanas',
@@ -178,7 +178,7 @@ export default function ServicesPage() {
     {
       id: 'gender-determination',
       title: 'Determinación de Género',
-      image: '/mainindex/ultrasound.jpg',
+      image: '/imgservices/B.jpg',
       price: 70,
       features: [
         '14+ semanas',
@@ -208,7 +208,7 @@ export default function ServicesPage() {
     {
       id: 'see-baby-color-plus',
       title: 'Ver al Bebé a Color Plus',
-      image: '/ultrasounds/Ultrasoundv3.jpg',
+      image: '/imgservices/E.jpg',
       price: 155,
       features: [
         '1 impresión a color 5x7',
@@ -221,7 +221,7 @@ export default function ServicesPage() {
     {
       id: 'multiple-visits',
       title: '¡Hi Baby Visitas Múltiples! 7 Visitas',
-      image: '/imagesrandom/4.jpg',
+      image: '/imgservices/F.jpg',
       price: 460,
       features: [
         '1 impresión a color 4x6 y blanco/negro en cada visita',
@@ -234,7 +234,7 @@ export default function ServicesPage() {
     {
       id: 'gender-check',
       title: 'Verificación de Género',
-      image: '/ultrasounds/DSC09280.png',
+      image: '/imgservices/g.jpg',
       price: 50,
       features: [
         'Debe tener 14 semanas o más',
@@ -243,7 +243,7 @@ export default function ServicesPage() {
     {
       id: 'color-session',
       title: 'Sesión a Color 4D/5HD',
-      image: '/imagesrandom/6.jpg',
+      image: '/imgservices/H.jpg',
       price: 85,
       features: [
         'Video y todas las fotos App Momitalk',
@@ -254,7 +254,7 @@ export default function ServicesPage() {
     {
       id: 'stuffed-animal',
       title: 'Peluche con el latido del bebé',
-      image: '/DSC09265.jpg',
+      image: '/imgservices/i.jpg',
       price: 50,
       features: [
         'Sin escaneo de ultrasonido',
@@ -264,7 +264,7 @@ export default function ServicesPage() {
     {
       id: 'gender-reveal',
       title: 'REVELACIÓN DE GÉNERO',
-      image: '/imagesrandom/7.jpg',
+      image: '/imgservices/j.jpg',
       price: 45,
       features: [
         'Dispara tus cañones de confeti dentro de nuestra sala de ultrasonido',
@@ -274,14 +274,14 @@ export default function ServicesPage() {
     {
       id: 'confetti-cannons',
       title: 'Cañones de Confeti',
-      image: '/imagesrandom/8.jpg',
+      image: '/imgservices/k.jpg',
       price: 12,
       features: [],
     },
     {
       id: 'powder-cannons',
       title: 'Cañones de Polvo',
-      image: '/imagesrandom/9.jpg',
+      image: '/imgservices/l.jpg',
       price: 13,
       features: [],
     },

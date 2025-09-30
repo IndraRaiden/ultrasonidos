@@ -125,13 +125,13 @@ export default function Second() {
           </div>
           
           {/* Right video column */}
-          <div className="lg:w-1/2">
-            <div className="overflow-hidden">
+          <div className="lg:w-1/2 w-full">
+            <div>
               <div 
                 className={`relative transform transition-all duration-1000 delay-200 ease-out ${sectionVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-24 opacity-0 scale-95'}`}
               >
                 {/* Main video with enhanced size */}
-                <div className="relative w-[110%] aspect-video rounded-2xl overflow-hidden group shadow-xl transform -translate-x-[5%]">
+                <div className="relative w-full lg:w-[110%] aspect-video rounded-2xl overflow-hidden group shadow-xl lg:transform lg:-translate-x-[5%]">
                   <div className="absolute inset-0 bg-indigo-900/5 group-hover:bg-indigo-900/0 transition-colors duration-500 z-10"></div>
                   
                   {/* Video iframe */}

@@ -39,8 +39,8 @@ export default function FAQSPage() {
             </h1>
             <p className="text-gray-600 mt-8 max-w-2xl mx-auto font-light leading-relaxed">
               {language === 'en' 
-                ? 'Find answers to the most frequently asked questions about our ultrasound services, procedures, and appointments.'
-                : 'Encuentre respuestas a las preguntas más frecuentes sobre nuestros servicios de ultrasonido, procedimientos y citas.'}
+                ? 'We are committed to delivering the highest quality ultrasound services.'
+                : 'Nos comprometemos a ofrecer servicios de ultrasonido de la más alta calidad.'}
             </p>
           </div>
         </div>
@@ -76,8 +76,8 @@ export default function FAQSPage() {
               </h3>
               <p className="text-gray-600 font-light leading-relaxed">
                 {language === 'en'
-                  ? 'We strive to achieve the highest standards in every service we offer, from diagnostic accuracy to patient care.'
-                  : 'Nos esforzamos por alcanzar los más altos estándares en cada servicio que ofrecemos, desde la precisión diagnóstica hasta la atención al paciente.'}
+                  ? 'We strive to achieve the highest standards in every service we offer.'
+                  : 'Nos esforzamos por alcanzar los más altos estándares en cada servicio que ofrecemos.'}
               </p>
             </div>
             
@@ -92,7 +92,7 @@ export default function FAQSPage() {
               </h3>
               <p className="text-gray-600 font-light leading-relaxed">
                 {language === 'en'
-                  ? 'We understand that for many moms-to-be, the journey to motherhood hasn’t always been easy. Some have faced heartbreak, loss, and uncertainty in past pregnancies and that can make it hard to fully embrace the joy of a new beginning. At Hi Baby Ultrasound, we’re here to walk beside you with care, comfort, and compassion. Our goal is to offer you peace of mind,to help ease some of the worry and replace it with hope and connection.'
+                  ? 'We understand that for many moms-to-be, the journey to motherhood hasn’t always been easy. Some have faced heartbreak, loss, and uncertainty in past pregnancies and that can make it hard to fully embrace the joy of a new beginning.\nAt Hi Baby Ultrasound, we’re here to walk beside you with care, comfort, and compassion. Our goal is to offer you peace of mind,to help ease some of the worry and replace it with hope and connection.'
                   : 'Entendemos que detrás de cada procedimiento hay una persona con preocupaciones y necesidades únicas. Nuestro enfoque humano hace la diferencia.'}
               </p>
             </div>
@@ -131,43 +131,92 @@ export default function FAQSPage() {
               {language === 'en'
                 ? 'Find answers to the most common questions about our services and processes.'
                 : 'Encuentre respuestas a las preguntas más comunes sobre nuestros servicios y procesos.'}
-            </p>
+  
+          </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div>
               <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
                 <span className="w-8 h-8 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#6642c8]">1</span>
-                {language === 'en' ? 'How can I schedule an appointment?' : '¿Cómo puedo programar una cita?'}
+                {language === 'en' ? "Can you tell the baby’s gender?" : '¿Pueden determinar el sexo del bebé?'}
               </h3>
               <p className="text-gray-600 font-light leading-relaxed pl-11">
                 {language === 'en'
-                  ? 'You can schedule an appointment by calling our phone number, sending an email, or using the contact form on this page. Our team will contact you to confirm the date and time.'
-                  : 'Puede programar una cita llamando a nuestro número de teléfono, enviando un correo electrónico o utilizando el formulario de contacto en esta página. Nuestro equipo se pondrá en contacto con usted para confirmar la fecha y hora.'}
+                  ? "Yes, the baby’s gender can often be determined, though it depends on factors like the baby’s position, especially after about 14 weeks of pregnancy."
+                  : 'Sí, a menudo se puede determinar el sexo del bebé, aunque depende de factores como la posición del bebé, especialmente después de aproximadamente 14 semanas de embarazo.'}
               </p>
             </div>
-            
+
             <div>
               <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
                 <span className="w-8 h-8 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#6642c8]">2</span>
-                {language === 'en' ? 'How long does an ultrasound study take?' : '¿Cuánto tiempo toma un estudio de ultrasonido?'}
+                {language === 'en' ? 'Should I drink water?' : '¿Debo beber agua?'}
               </h3>
               <p className="text-gray-600 font-light leading-relaxed pl-11">
                 {language === 'en'
-                  ? 'The ultrasound scan is about 15 to 25 minutes.'
-                  : 'El escaneo de ultrasonido dura aproximadamente de 15 a 25 minutos.'}
+                  ? 'For external (transabdominal) ultrasounds, a full or medium-full bladder can help optimize image quality.'
+                  : 'Para ultrasonidos externos (transabdominales), una vejiga llena o medianamente llena puede ayudar a optimizar la calidad de la imagen.'}
               </p>
             </div>
-            
+
             <div>
               <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
                 <span className="w-8 h-8 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#6642c8]">3</span>
-                {language === 'en' ? 'The 6 weeks DNA early gender test' : 'La prueba de ADN para determinar el género a las 6 semanas'}
+                {language === 'en' ? 'What is the difference between 2D and 3D and 4D?' : '¿Cuál es la diferencia entre 2D, 3D y 4D?'}
               </h3>
               <p className="text-gray-600 font-light leading-relaxed pl-11">
                 {language === 'en'
-                  ? 'You will receive your results between 1 to 2 business days.'
-                  : 'Recibirá sus resultados entre 1 y 2 días hábiles.'}
+                  ? '2D provides a basic, flat image of the fetus, 3D provides a three-dimensional image, while 4D adds real-time movement, allowing parents to see their baby’s actions.'
+                  : '2D ofrece una imagen básica y plana del feto; 3D proporciona una imagen tridimensional, mientras que 4D añade movimiento en tiempo real, permitiendo a los padres ver las acciones de su bebé.'}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
+                <span className="w-8 h-8 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#6642c8]">4</span>
+                {language === 'en' ? 'Are ultrasounds safe for the baby?' : '¿Los ultrasonidos son seguros para el bebé?'}
+              </h3>
+              <p className="text-gray-600 font-light leading-relaxed pl-11">
+                {language === 'en'
+                  ? 'Yes, medical ultrasounds have been used safely for decades. They use high-frequency sound waves, not radiation, to create images.'
+                  : 'Sí, los ultrasonidos médicos se han utilizado de forma segura durante décadas. Utilizan ondas sonoras de alta frecuencia, no radiación, para crear imágenes.'}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
+                <span className="w-8 h-8 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#6642c8]">5</span>
+                {language === 'en' ? 'Does an elective ultrasound replace a medical one?' : '¿Un ultrasonido electivo reemplaza un ultrasonido médico?'}
+              </h3>
+              <p className="text-gray-600 font-light leading-relaxed pl-11">
+                {language === 'en'
+                  ? 'No. An elective ultrasound for keepsakes is not a substitute for the diagnostic scans performed by a doctor. It is still necessary to see a healthcare provider for medical prenatal care.'
+                  : 'No. Un ultrasonido electivo con fines de recuerdo no sustituye a los estudios diagnósticos realizados por un médico. Sigue siendo necesario acudir a un profesional de la salud para la atención prenatal médica.'}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
+                <span className="w-8 h-8 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#6642c8]">6</span>
+                {language === 'en' ? 'Will insurance cover an elective ultrasound?' : '¿El seguro cubrirá un ultrasonido electivo?'}
+              </h3>
+              <p className="text-gray-600 font-light leading-relaxed pl-11">
+                {language === 'en'
+                  ? 'Typically, no. Insurance generally does not cover elective ultrasounds because they are not medically indicated.'
+                  : 'Por lo general, no. Normalmente los seguros no cubren ultrasonidos electivos porque no están médicamente indicados.'}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-light tracking-wider mb-4 text-[#3a3a3a] flex items-center">
+                <span className="w-8 h-8 rounded-full bg-[#8a63d2]/10 flex items-center justify-center mr-3 flex-shrink-0 text-[#6642c8]">7</span>
+                {language === 'en' ? 'What if my baby is not cooperating during the scan?' : '¿Qué pasa si mi bebé no coopera durante el estudio?'}
+              </h3>
+              <p className="text-gray-600 font-light leading-relaxed pl-11">
+                {language === 'en'
+                  ? 'We may ask you to move around, change positions, drink something sweet, or take a short walk to encourage your baby to move.'
+                  : 'Podríamos pedirle que se mueva, cambie de posición, beba algo dulce o dé una breve caminata para animar a su bebé a moverse.'}
               </p>
             </div>
           </div>
@@ -202,7 +251,7 @@ export default function FAQSPage() {
               
               <p className="text-gray-600 mb-12 font-light leading-relaxed max-w-2xl mx-auto text-lg">
                 {language === 'en'
-                  ? 'Our team of board-certified specialists uses the most advanced technology to provide accurate diagnostics in a comfortable, patient-centered environment.'
+                  ? 'Our team of board-certified specialists uses the most advanced technology to provide ultrasound imaging in a comfortable, patient-centered environment.'
                   : 'Nuestro equipo de especialistas certificados utiliza la tecnología más avanzada para proporcionar diagnósticos precisos en un ambiente cómodo y centrado en el paciente.'}
               </p>
               
@@ -212,7 +261,7 @@ export default function FAQSPage() {
                   className="relative group overflow-hidden rounded-full bg-gradient-to-r from-[#6642c8] to-[#8a63d2] px-10 py-4 text-white font-light tracking-wide min-w-[220px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
                 >
                   <span className="relative z-10 flex items-center justify-center">
-                    {language === 'en' ? 'Schedule a consultation' : 'Programar una consulta'}
+                    {language === 'en' ? 'Book your appointment' : 'Programar una consulta'}
                     <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>

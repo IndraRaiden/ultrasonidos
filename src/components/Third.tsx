@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import StuffedAnimalsCard from "./StuffedAnimalsCard";
 
 export default function Third() {
   const [currentLanguage, setCurrentLanguage] = useState('en');
@@ -99,34 +100,7 @@ export default function Third() {
           </div>
 
           {/* Service Card 3 */}
-          <div className="group" style={{ borderRadius: '0.5rem', overflow: 'hidden', boxShadow: '0 5px 15px rgba(0, 0, 0, 0.03)', background: 'white', transition: 'transform 0.3s ease' }}>
-            <div className="aspect-[4/3] relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-30"></div>
-              <Image
-                src="/indexmain/800.jpg"
-                alt="Premium Maintenance"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div style={{ padding: '1.5rem', background: 'white', position: 'relative', minHeight: '12rem' }}>
-              <h3 className="text-xl font-medium tracking-wider mb-3 text-[#3a3a3a] group-hover:text-[#6642c8] transition-colors duration-300">
-                <span className="block text-sm text-purple-500 mb-1 font-semibold uppercase">{currentLanguage === 'en' ? 'Keepsakes' : 'Recuerdos'}</span>
-                {currentLanguage === 'en' ? '🧸 STUFFED ANIMALS' : '🧸 PELUCHES'}
-              </h3>
-              <p className="text-gray-600 mb-6 text-sm font-light">
-                {currentLanguage === 'en' 
-                  ? "Adorable plush animals with a special recording of your baby's heartbeat inside, creating a cherished keepsake that will last a lifetime."
-                  : "Adorables animales de peluche con una grabación especial del latido del corazón de su bebé en el interior, creando un recuerdo preciado que durará toda la vida."}
-              </p>
-              <Link href="/services" className="btn-link" style={{ display: 'flex', alignItems: 'center', position: 'absolute', bottom: '1.5rem', left: '1.5rem' }}>
-                <span className="text-xs uppercase tracking-widest">{currentLanguage === 'en' ? '✨ Discover' : '✨ Descubrir'}</span>
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-              </Link>
-            </div>
-          </div>
+          <StuffedAnimalsCard />
         </div>
       </div>
     </section>

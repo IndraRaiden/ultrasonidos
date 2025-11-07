@@ -28,68 +28,93 @@ export default function GalleryPage() {
   const galleryImages = [
     {
       id: 'img1',
-      src: '/imagesrandom/1.jpg',
-      alt: language === 'en' ? 'Ultrasound image 1' : 'Imagen de ultrasonido 1'
+      src: '/galeria/940265_32.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img2',
-      src: '/imagesrandom/2.jpg',
-      alt: language === 'en' ? 'Ultrasound image 2' : 'Imagen de ultrasonido 2'
+      src: '/galeria/940265_43.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img3',
-      src: '/imagesrandom/3.jpg',
-      alt: language === 'en' ? 'Ultrasound image 3' : 'Imagen de ultrasonido 3'
+      src: '/galeria/A_0004.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img4',
-      src: '/imagesrandom/4.jpg',
-      alt: language === 'en' ? 'Ultrasound image 4' : 'Imagen de ultrasonido 4'
+      src: '/galeria/B88C56E9-5F19-4CF1-A668-149B4E774A7D.JPG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img5',
-      src: '/imagesrandom/5.jpg',
-      alt: language === 'en' ? 'Ultrasound image 5' : 'Imagen de ultrasonido 5'
+      src: '/galeria/BAILEY_0023.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img6',
-      src: '/imagesrandom/6.jpg',
-      alt: language === 'en' ? 'Ultrasound image 6' : 'Imagen de ultrasonido 6'
+      src: '/galeria/BAILEY_0036 (1).jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img7',
-      src: '/imagesrandom/7.jpg',
-      alt: language === 'en' ? 'Ultrasound image 7' : 'Imagen de ultrasonido 7'
+      src: '/galeria/BLANCO_0022.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img8',
-      src: '/imagesrandom/8.jpg',
-      alt: language === 'en' ? 'Ultrasound image 8' : 'Imagen de ultrasonido 8'
+      src: '/galeria/Captura de pantalla 2025-10-29 124217.png',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img9',
-      src: '/imagesrandom/9.jpg',
-      alt: language === 'en' ? 'Ultrasound image 9' : 'Imagen de ultrasonido 9'
+      src: '/galeria/E9C7B880-ADBB-4595-87C2-57E6F257850E.JPG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img10',
-      src: '/imagesrandom/10.jpg',
-      alt: language === 'en' ? 'Ultrasound image 10' : 'Imagen de ultrasonido 10'
+      src: '/galeria/EB945E5A-2E31-402B-BB6B-2135ECF31775.JPG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
-      id: 'img20',
-      src: '/imagesrandom/20.jpg',
-      alt: language === 'en' ? 'Ultrasound image 20' : 'Imagen de ultrasonido 20'
+      id: 'img11',
+      src: '/galeria/IMG_3927.PNG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
-      id: 'img30',
-      src: '/imagesrandom/30.jpg',
-      alt: language === 'en' ? 'Ultrasound image 30' : 'Imagen de ultrasonido 30'
+      id: 'img12',
+      src: '/galeria/IMG_4098.PNG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
-      id: 'img40',
-      src: '/imagesrandom/40.jpg',
-      alt: language === 'en' ? 'Ultrasound image 40' : 'Imagen de ultrasonido 40'
+      id: 'img13',
+      src: '/galeria/IMG_4231.PNG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img14',
+      src: '/galeria/IMG_4825.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img15',
+      src: '/galeria/IMG_5583.PNG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img16',
+      src: '/galeria/J_0007.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img17',
+      src: '/galeria/MAY_0016.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img18',
+      src: '/galeria/N_0017.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     }
   ];
 
@@ -114,9 +139,69 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* Videos Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-light tracking-wide text-[#3a3a3a] mb-6">
+              {language === 'en' ? 'Watch Our Videos' : 'Mira Nuestros Videos'}
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="aspect-[9/16]">
+                <iframe
+                  src="https://www.youtube.com/embed/34K30yRsJSs?autoplay=1&mute=1&loop=1&playlist=34K30yRsJSs"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg shadow-xl"
+                ></iframe>
+              </div>
+              <div className="aspect-[9/16]">
+                <iframe
+                  src="https://www.youtube.com/embed/88WmiJAquj0?autoplay=1&mute=1&loop=1&playlist=88WmiJAquj0"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg shadow-xl"
+                ></iframe>
+              </div>
+              <div className="aspect-[9/16]">
+                <iframe
+                  src="https://www.youtube.com/embed/slXdMoUNjOw?autoplay=1&mute=1&loop=1&playlist=slXdMoUNjOw"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg shadow-xl"
+                ></iframe>
+              </div>
+              <div className="aspect-[9/16]">
+                <iframe
+                  src="https://www.youtube.com/embed/-4E_hNejokg?autoplay=1&mute=1&loop=1&playlist=-4E_hNejokg"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg shadow-xl"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery Section */}
       <section className="py-16">
         <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-light tracking-wide text-[#3a3a3a] mb-6">
+              {language === 'en' ? 'Image Gallery' : 'Galería de Imágenes'}
+            </h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {galleryImages.map((image) => (
               <div key={image.id} className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">

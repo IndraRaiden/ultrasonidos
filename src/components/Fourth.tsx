@@ -47,13 +47,16 @@ export default function Fourth() {
             </h2>
             <p className="text-gray-600 mb-6 font-light leading-relaxed">
               {currentLanguage === 'en' 
-                ? 'We are an exclusive firm specialized in high-precision ultrasound technology, dedicated to providing innovative and sophisticated solutions for the most demanding medical and industrial sectors.'
-                : 'Somos una firma exclusiva especializada en tecnología de ultrasonido de alta precisión, dedicada a proporcionar soluciones innovadoras y sofisticadas para el sector médico e industrial más exigente.'}
-            </p>
-            <p className="text-gray-600 mb-10 font-light leading-relaxed">
-              {currentLanguage === 'en' 
-                ? 'With a trajectory of excellence, our select team of experts is committed to providing impeccable and personalized service that exceeds the expectations of our distinguished clientele.'
-                : 'Con una trayectoria de excelencia, nuestro selecto equipo de expertos está comprometido con ofrecer un servicio impecable y personalizado que supera las expectativas de nuestra distinguida clientela.'}
+                ? `At Hi Baby Ultrasound, we believe every moment of your pregnancy journey is
+                  special. Our ultrasound studio offers a warm, family-friendly space where you can
+                  bond with your baby before they arrive. We would love to give you an
+                  unforgettable experience that lets you see your little one's face,movements,and
+                  personality in incredible detail. Whether it’s your first peek or a special moment to
+                  share with loved ones,we’re here to make it magical,memorable, and full of joy.
+                  We have experienced sonographers that love what they do and will give you an
+                  ultimate experience!
+                  Book with Hi Baby and you wont regret it.`
+                : 'TODO: Add Spanish translation'}
             </p>
           </div>
         </div>

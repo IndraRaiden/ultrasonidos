@@ -92,7 +92,7 @@ export default function FAQSPage() {
               </h3>
               <p className="text-gray-600 font-light leading-relaxed">
                 {language === 'en'
-                  ? 'We understand that behind every procedure there is a person with unique concerns and needs. Our human approach makes the difference.'
+                  ? 'We understand that for many moms-to-be, the journey to motherhood hasn’t always been easy. Some have faced heartbreak, loss, and uncertainty in past pregnancies and that can make it hard to fully embrace the joy of a new beginning. At Hi Baby Ultrasound, we’re here to walk beside you with care, comfort, and compassion. Our goal is to offer you peace of mind,to help ease some of the worry and replace it with hope and connection.'
                   : 'Entendemos que detrás de cada procedimiento hay una persona con preocupaciones y necesidades únicas. Nuestro enfoque humano hace la diferencia.'}
               </p>
             </div>

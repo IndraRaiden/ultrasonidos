@@ -46,7 +46,7 @@ export default function ServicesPage() {
     {
       id: 'gender-determination',
       title: 'Gender Determination',
-      image: '/imgservices/B.jpg',
+      image: '/newfotos/ChatGPT Image 28 oct 2025, 06_10_46 p.m..png',
       price: 70,
       features: [
         '14+ weeks',
@@ -61,7 +61,7 @@ export default function ServicesPage() {
     {
       id: 'gender-plus',
       title: 'Gender Plus',
-      image: '/ultrasounds/Ultrasoundv2.webp',
+      image: '/newfotos/ChatGPT Image 28 oct 2025, 06_18_58 p.m..png',
       price: 85,
       features: [
         '14+ weeks',
@@ -76,7 +76,7 @@ export default function ServicesPage() {
     {
       id: 'see-baby-color-plus',
       title: 'See Baby in Color plus',
-      image: '/imgservices/E.jpg',
+      image: '/newfotos/HIBABY.png',
       price: 155,
       features: [
         '1 5x7 color print',
@@ -102,7 +102,7 @@ export default function ServicesPage() {
     {
       id: 'gender-check',
       title: 'Gender Check',
-      image: '/imgservices/g.jpg',
+      image: '/newfotos/HIBABY.png',
       price: 50,
       features: [
         'Must be 14 weeks plus',
@@ -143,15 +143,15 @@ export default function ServicesPage() {
       id: 'confetti-cannons',
       title: 'Confetti Cannons',
       image: '/imgservices/k.jpg',
-      price: 12,
-      features: [],
+      price: 0,
+      features: ['Prices are subject to change.'],
     },
     {
       id: 'powder-cannons',
       title: 'Powder Cannons',
       image: '/imgservices/l.jpg',
-      price: 13,
-      features: [],
+      price: 0,
+      features: ['Prices are subject to change.'],
     },
   ];
 
@@ -178,7 +178,7 @@ export default function ServicesPage() {
     {
       id: 'gender-determination',
       title: 'Determinación de Género',
-      image: '/imgservices/B.jpg',
+      image: '/newfotos/ChatGPT Image 28 oct 2025, 06_10_46 p.m..png',
       price: 70,
       features: [
         '14+ semanas',
@@ -193,7 +193,7 @@ export default function ServicesPage() {
     {
       id: 'gender-plus',
       title: 'Género Plus',
-      image: '/ultrasounds/Ultrasoundv2.webp',
+      image: '/newfotos/ChatGPT Image 28 oct 2025, 06_18_58 p.m..png',
       price: 85,
       features: [
         '14+ semanas',
@@ -208,7 +208,7 @@ export default function ServicesPage() {
     {
       id: 'see-baby-color-plus',
       title: 'Ver al Bebé a Color Plus',
-      image: '/imgservices/E.jpg',
+      image: '/newfotos/HIBABY.png',
       price: 155,
       features: [
         '1 impresión a color 5x7',
@@ -234,7 +234,7 @@ export default function ServicesPage() {
     {
       id: 'gender-check',
       title: 'Verificación de Género',
-      image: '/imgservices/g.jpg',
+      image: '/newfotos/HIBABY.png',
       price: 50,
       features: [
         'Debe tener 14 semanas o más',
@@ -275,15 +275,15 @@ export default function ServicesPage() {
       id: 'confetti-cannons',
       title: 'Cañones de Confeti',
       image: '/imgservices/k.jpg',
-      price: 12,
-      features: [],
+      price: 0,
+      features: ['Los precios están sujetos a cambios.'],
     },
     {
       id: 'powder-cannons',
       title: 'Cañones de Polvo',
       image: '/imgservices/l.jpg',
-      price: 13,
-      features: [],
+      price: 0,
+      features: ['Los precios están sujetos a cambios.'],
     },
   ];
 
@@ -339,12 +339,14 @@ export default function ServicesPage() {
                       </li>
                     ))}
                     {/* Price as part of the bio/description list */}
-                    <li key={`${s.id}-price`} className="flex items-start">
-                      <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                      </svg>
-                      <span className="text-[#3a3a3a] font-medium">{language === 'en' ? `Price: $${s.price}` : `Precio: $${s.price}`}</span>
-                    </li>
+                    {s.price > 0 && (
+                      <li key={`${s.id}-price`} className="flex items-start">
+                        <svg className="w-5 h-5 text-[#6642c8] mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                        </svg>
+                        <span className="text-[#3a3a3a] font-medium">{language === 'en' ? `Price: $${s.price}` : `Precio: $${s.price}`}</span>
+                      </li>
+                    )}
                   </ul>
                   <div className="mt-auto">
                     {/* Purple frame removed as requested */}
@@ -443,7 +445,7 @@ export default function ServicesPage() {
                 : 'Sábados-Domingos 10am Cierre flexible según citas programadas. Llame para reservar su lugar. ¡Reserve temprano, los espacios se llenan rápido!'}
             </p>
             <p className="text-[#6642c8] font-semibold mb-2">
-              {language === 'en' ? 'Hi Baby ultrasound Phone number' : 'Número de teléfono de Hi Baby ultrasound'}: +1 (619) 519-2997
+              {language === 'en' ? 'Phone Number' : 'Número de teléfono'}: +1 619 292 36 00
             </p>
             <p className="text-[#6642c8] font-semibold mb-2">
               {language === 'en' ? 'Book an appointment through text' : 'Reserve una cita por mensaje de texto'}: +1 (619) 519-2997

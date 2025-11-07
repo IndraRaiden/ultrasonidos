@@ -79,7 +79,7 @@ export default function Second() {
               >
                 {currentLanguage === 'en' 
                   ? <>
-                      From 2D to 4D Ultrasounds – Your Baby&apos;s First Hello
+                      From 2D to 4D Ultrasounds – Your Baby's First Hello
                     </>
                   : <>
                       Hola Bebé Ultrasonido – El primer hola de tu bebé
@@ -92,7 +92,7 @@ export default function Second() {
                 className={`text-gray-600 leading-relaxed transform transition-all duration-700 delay-200 ease-out ${sectionVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
               >
                 {currentLanguage === 'en' 
-                  ? 'See every detail of your little one&apos;s journey — from the very first heartbeat to lifelike 4D smiles. At Hi Baby, we turn precious moments into lasting memories'
+                  ? "See every detail of your little one's journey — from the very first heartbeat to lifelike 4D smiles. At Hi Baby, we turn precious moments into lasting memories"
                   : 'Desde el primer latido hasta las sonrisas más dulces, hacemos que cada visita sea inolvidable. Comparte la alegría con tus seres queridos y llévate a casa recuerdos que calientan el corazón.'}
               </p>
             </div>

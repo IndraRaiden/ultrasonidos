@@ -74,6 +74,19 @@ export default function ServicesPage() {
       ],
     },
     {
+      id: 'see-baby-color',
+      title: 'See Baby in Color',
+      image: '/newservice/NUEVO-SERVICIO.png',
+      price: 110,
+      features: [
+        '1 4x6 4D Color Print or 2 Prints for $125',
+        '3 Black and white prints',
+        "Hear baby's heartbeat",
+        'Video & All pictures App Momitalk',
+        "Add on Baby's Heartbeat in a stuffed Animal $38",
+      ],
+    },
+    {
       id: 'see-baby-color-plus',
       title: 'See Baby in Color plus',
       image: '/newfotos/HIBABY.png',
@@ -102,7 +115,7 @@ export default function ServicesPage() {
     {
       id: 'gender-check',
       title: 'Gender Check',
-      image: '/newfotos/HIBABY.png',
+      image: '/newservice/GENDER-CHECK.png',
       price: 50,
       features: [
         'Must be 14 weeks plus',
@@ -206,6 +219,19 @@ export default function ServicesPage() {
       ],
     },
     {
+      id: 'see-baby-color',
+      title: 'Ver al Bebé a Color',
+      image: '/newservice/NUEVO-SERVICIO.png',
+      price: 110,
+      features: [
+        '1 Impresión a color 4D 4x6 o 2 impresiones por $125',
+        '3 impresiones en blanco y negro',
+        'Escucha el latido del bebé',
+        'Video y todas las fotos App Momitalk',
+        'Agrega el latido del bebé en un peluche $38',
+      ],
+    },
+    {
       id: 'see-baby-color-plus',
       title: 'Ver al Bebé a Color Plus',
       image: '/newfotos/HIBABY.png',
@@ -234,7 +260,7 @@ export default function ServicesPage() {
     {
       id: 'gender-check',
       title: 'Verificación de Género',
-      image: '/newfotos/HIBABY.png',
+      image: '/newservice/GENDER-CHECK.png',
       price: 50,
       features: [
         'Debe tener 14 semanas o más',
@@ -445,7 +471,7 @@ export default function ServicesPage() {
                 : 'Sábados-Domingos 10am Cierre flexible según citas programadas. Llame para reservar su lugar. ¡Reserve temprano, los espacios se llenan rápido!'}
             </p>
             <p className="text-[#6642c8] font-semibold mb-2">
-              {language === 'en' ? 'Phone Number' : 'Número de teléfono'}: +1 619 292 36 00
+              {language === 'en' ? 'Phone Number' : 'Número de teléfono'}: +1 (619) 292-3600
             </p>
             <p className="text-[#6642c8] font-semibold mb-2">
               {language === 'en' ? 'Book an appointment through text' : 'Reserve una cita por mensaje de texto'}: +1 (619) 519-2997

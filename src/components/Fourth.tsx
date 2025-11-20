@@ -30,7 +30,7 @@ export default function Fourth() {
               <div className="w-full aspect-[4/5] relative overflow-hidden bg-[#f5f5f5]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#8a63d2]/10 to-transparent opacity-30"></div>
                 <Image 
-                  src="/newabout/ChatGPT Image 29 oct 2025, 10_25_10 a.m..png" 
+                  src="/newservice/FOTO-MAIN.png" 
                   alt="Nuestra empresa" 
                   fill
                   className="object-cover"

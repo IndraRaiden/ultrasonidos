@@ -74,6 +74,20 @@ export default function ServicesPage() {
       ],
     },
     {
+      id: 'dna-early-gender',
+      title: 'DNA Early Gender Test 6 weeks +',
+      image: '/fotos/newservice/LAST SERVICE HBBY.png',
+      price: 139,
+      features: [
+        'Standard (results in 2 days): $139',
+        'Fast Track (results next day): $155',
+        '6+ weeks',
+        'Non-invasive DNA test',
+        '99.9% accuracy',
+        'Early gender determination',
+      ],
+    },
+    {
       id: 'see-baby-color',
       title: 'See Baby in Color',
       image: '/newservice/NUEVO-SERVICIO.png',
@@ -216,6 +230,20 @@ export default function ServicesPage() {
         'SOBRE SECRETO SI SE SOLICITA',
         'Agrega un vistazo en 4D por $18 (y recibe todas las imágenes 2D/4D/5HD)',
         'Agrega el latido del bebé en un peluche $38',
+      ],
+    },
+    {
+      id: 'dna-early-gender',
+      title: 'Prueba de ADN de Género Temprano 6 semanas +',
+      image: '/fotos/newservice/LAST SERVICE HBBY.png',
+      price: 139,
+      features: [
+        'Estándar (resultados en 2 días): $139',
+        'Vía Rápida (resultados al día siguiente): $155',
+        '6+ semanas',
+        'Prueba de ADN no invasiva',
+        '99.9% de precisión',
+        'Determinación temprana del género',
       ],
     },
     {

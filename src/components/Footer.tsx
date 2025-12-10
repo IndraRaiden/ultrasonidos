@@ -38,6 +38,17 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-500 text-xs font-light">© {new Date().getFullYear()} {currentLanguage === 'en' ? 'All rights reserved' : 'Todos los derechos reservados'}</p>
+            <p className="text-gray-400 text-xs font-light mt-2">
+              {currentLanguage === 'en' ? 'Developed by' : 'Desarrollado por'}{' '}
+              <a 
+                href="https://www.artificialwebs.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#8a63d2] hover:text-[#6642c8] transition-colors duration-300"
+              >
+                Artificial webs
+              </a>
+            </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
             <Link href="/" className="text-xs uppercase tracking-widest text-gray-500 hover:text-[#6642c8] transition-colors duration-300">

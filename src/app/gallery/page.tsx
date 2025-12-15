@@ -28,91 +28,136 @@ export default function GalleryPage() {
   const galleryImages = [
     {
       id: 'img1',
-      src: '/galeria/940265_32.jpg',
+      src: '/fotos/gallery7000/FOTO MAIN.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img2',
-      src: '/galeria/940265_43.jpg',
+      src: '/fotos/gallery7000/GAL1.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img3',
-      src: '/galeria/A_0004.jpg',
+      src: '/fotos/gallery7000/GAL2.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img4',
-      src: '/galeria/B88C56E9-5F19-4CF1-A668-149B4E774A7D.JPG',
+      src: '/fotos/gallery7000/GAL3.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img5',
-      src: '/galeria/BAILEY_0023.jpg',
+      src: '/fotos/gallery7000/GAL4.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img6',
-      src: '/galeria/BAILEY_0036 (1).jpg',
+      src: '/fotos/gallery7000/GAL5.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img7',
-      src: '/galeria/BLANCO_0022.jpg',
+      src: '/fotos/gallery7000/GAL6.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img8',
-      src: '/galeria/Captura de pantalla 2025-10-29 124217.png',
+      src: '/fotos/gallery7000/GENDER CHECK.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img9',
-      src: '/galeria/E9C7B880-ADBB-4595-87C2-57E6F257850E.JPG',
+      src: '/fotos/gallery7000/NUEVO SERVICIO.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img10',
-      src: '/galeria/EB945E5A-2E31-402B-BB6B-2135ECF31775.JPG',
+      src: '/galeria/940265_32.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img11',
-      src: '/galeria/IMG_3927.PNG',
+      src: '/galeria/940265_43.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img12',
-      src: '/galeria/IMG_4098.PNG',
+      src: '/galeria/A_0004.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img13',
-      src: '/galeria/IMG_4231.PNG',
+      src: '/galeria/B88C56E9-5F19-4CF1-A668-149B4E774A7D.JPG',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img14',
-      src: '/galeria/IMG_4825.jpg',
+      src: '/galeria/BAILEY_0023.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img15',
-      src: '/galeria/IMG_5583.PNG',
+      src: '/galeria/BAILEY_0036 (1).jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img16',
-      src: '/galeria/J_0007.jpg',
+      src: '/galeria/BLANCO_0022.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img17',
-      src: '/galeria/MAY_0016.jpg',
+      src: '/galeria/Captura de pantalla 2025-10-29 124217.png',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     },
     {
       id: 'img18',
+      src: '/galeria/E9C7B880-ADBB-4595-87C2-57E6F257850E.JPG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img19',
+      src: '/galeria/EB945E5A-2E31-402B-BB6B-2135ECF31775.JPG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img20',
+      src: '/galeria/IMG_3927.PNG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img21',
+      src: '/galeria/IMG_4098.PNG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img22',
+      src: '/galeria/IMG_4231.PNG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img23',
+      src: '/galeria/IMG_4825.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img24',
+      src: '/galeria/IMG_5583.PNG',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img25',
+      src: '/galeria/J_0007.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img26',
+      src: '/galeria/MAY_0016.jpg',
+      alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
+    },
+    {
+      id: 'img27',
       src: '/galeria/N_0017.jpg',
       alt: language === 'en' ? 'Ultrasound image' : 'Imagen de ultrasonido'
     }
